@@ -24,7 +24,7 @@ namespace MaximaxCare
 
         private void sfButton5_Click(object sender, EventArgs e)
         {
-            sfButton1.Enabled = true;
+            sfButton1.Enabled = false;
         }
 
         private void sfButton1_Click(object sender, EventArgs e)
