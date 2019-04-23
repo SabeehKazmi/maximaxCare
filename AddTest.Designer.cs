@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.sfButton1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -51,18 +51,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Define Test";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(129, 163);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 26);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -97,6 +85,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Disease";
             // 
+            // sfButton1
+            // 
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(143, 161);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(73, 28);
+            this.sfButton1.TabIndex = 8;
+            this.sfButton1.Text = "Add";
+            // 
             // AddTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,10 +113,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private Syncfusion.WinForms.Controls.SfButton sfButton1;
     }
 }
