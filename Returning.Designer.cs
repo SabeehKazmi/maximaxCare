@@ -30,14 +30,14 @@
         {
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -58,6 +58,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(391, 93);
             this.dataGridView2.Name = "dataGridView2";
@@ -66,9 +68,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.sfButton8);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,6 +80,19 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Searching";
+            // 
+            // sfButton8
+            // 
+            this.sfButton8.AccessibleName = "Button";
+            this.sfButton8.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton8.Location = new System.Drawing.Point(244, 45);
+            this.sfButton8.Name = "sfButton8";
+            this.sfButton8.Size = new System.Drawing.Size(80, 20);
+            this.sfButton8.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.TabIndex = 15;
+            this.sfButton8.Text = "Search";
+            this.sfButton8.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker2
             // 
@@ -94,18 +109,6 @@
             this.label9.Size = new System.Drawing.Size(30, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Date";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Location = new System.Drawing.Point(244, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 28);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -125,6 +128,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 318);
             this.dataGridView1.Name = "dataGridView1";
@@ -133,7 +138,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.sfButton1);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -154,17 +159,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product_Details";
             // 
-            // button3
+            // sfButton1
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(865, 43);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 30);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Return";
-            this.button3.UseVisualStyleBackColor = false;
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(865, 46);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(96, 26);
+            this.sfButton1.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton1.TabIndex = 15;
+            this.sfButton1.Text = "Return";
+            this.sfButton1.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
@@ -291,12 +297,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
@@ -309,5 +313,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private Syncfusion.WinForms.Controls.SfButton sfButton8;
+        private Syncfusion.WinForms.Controls.SfButton sfButton1;
     }
 }

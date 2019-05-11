@@ -12,12 +12,152 @@ namespace MaximaxCare
 {
     public partial class Settings : MetroFramework.Forms.MetroForm
     {
+        Repo rp = new Repo();
+        DataSet ds = new DataSet();
+        String query;
+        int r;
+        DialogResult dr = new DialogResult();
         public Settings()
         {
             InitializeComponent();
         }
 
         private void Settings_Load(object sender, EventArgs e)
+        {
+            query = "select * from author";
+            ds = rp.getdata(query);
+            dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sfButton2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                if (textBox2.Text != "")
+                {
+                    if (comboBox1.Text != "")
+                    {
+                        if (textBox3.Text != "")
+                        {
+                            query = "INSERT INTO author (User_Name, Password, Date, Role, E_Mail) VALUES ('"+ textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Text + "', '" + comboBox1.Text + "', '" + textBox3.Text + "')";
+                            try
+                            {
+                                rp.savdelup(query);
+                                dr = (MessageBox.Show("Data Saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            dr = (MessageBox.Show("Please enter E-Mail", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                        }
+                    }
+                    else
+                    {
+                        dr = (MessageBox.Show("Please select a role", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                    }
+                }
+                else
+                {
+                    dr = (MessageBox.Show("Please enter Password", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                }
+            }
+            else
+            {
+                dr = (MessageBox.Show("Please enter User_Name", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sfButton3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "")
+            {
+                try
+                {
+                    query = "DELETE FROM author WHERE E_Mail = '" + textBox3.Text + "'";
+                    rp.savdelup(query);
+                    dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                dr = (MessageBox.Show("The user will delete only on his/her E-Mail address", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                textBox3.Focus();
+            }
+        }
+
+        private void sfButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sfButton1_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text != "")
+            {
+                try
+                {
+                    query = "UPDATE author SET User_Name = '" + textBox1.Text + "', Password = '" + textBox2.Text + "', Date = '" + dateTimePicker1.Text + "', Role = '" + comboBox1.Text + "', E_Mail = '" + textBox3.Text + "' WHERE E_Mail = '" + textBox3.Text + "'";
+                    rp.savdelup(query);
+                    dr = (MessageBox.Show("Updated Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
+            }
+            else
+            {
+                dr = (MessageBox.Show("The user will delete only on his/her E-Mail address", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                textBox3.Focus();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

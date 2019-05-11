@@ -30,13 +30,13 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.txtWeight = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.txtPiecePack = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSPP = new System.Windows.Forms.TextBox();
@@ -72,6 +72,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 265);
             this.dataGridView1.Name = "dataGridView1";
@@ -80,13 +82,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.sfButton5);
+            this.groupBox1.Controls.Add(this.sfButton1);
+            this.groupBox1.Controls.Add(this.sfButton4);
+            this.groupBox1.Controls.Add(this.sfButton3);
+            this.groupBox1.Controls.Add(this.sfButton2);
             this.groupBox1.Controls.Add(this.txtWeight);
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtPiecePack);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.txtSPP);
@@ -120,41 +122,71 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Medicine_Information";
             // 
-            // button7
+            // sfButton5
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.Location = new System.Drawing.Point(825, 109);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(106, 35);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Print";
-            this.button7.UseVisualStyleBackColor = false;
+            this.sfButton5.AccessibleName = "Button";
+            this.sfButton5.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton5.Location = new System.Drawing.Point(859, 115);
+            this.sfButton5.Name = "sfButton5";
+            this.sfButton5.Size = new System.Drawing.Size(96, 28);
+            this.sfButton5.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.TabIndex = 38;
+            this.sfButton5.Text = "Print";
+            this.sfButton5.UseVisualStyleBackColor = false;
+            this.sfButton5.Click += new System.EventHandler(this.sfButton5_Click);
             // 
-            // button6
+            // sfButton1
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.Location = new System.Drawing.Point(407, 109);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 35);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "Edit";
-            this.button6.UseVisualStyleBackColor = false;
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(757, 115);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(96, 28);
+            this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.TabIndex = 36;
+            this.sfButton1.Text = "Save";
+            this.sfButton1.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // sfButton4
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.Location = new System.Drawing.Point(518, 109);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 35);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = false;
+            this.sfButton4.AccessibleName = "Button";
+            this.sfButton4.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton4.Location = new System.Drawing.Point(655, 115);
+            this.sfButton4.Name = "sfButton4";
+            this.sfButton4.Size = new System.Drawing.Size(96, 28);
+            this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.TabIndex = 37;
+            this.sfButton4.Text = "Update Stock";
+            this.sfButton4.UseVisualStyleBackColor = false;
+            // 
+            // sfButton3
+            // 
+            this.sfButton3.AccessibleName = "Button";
+            this.sfButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton3.Location = new System.Drawing.Point(552, 115);
+            this.sfButton3.Name = "sfButton3";
+            this.sfButton3.Size = new System.Drawing.Size(96, 28);
+            this.sfButton3.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton3.TabIndex = 34;
+            this.sfButton3.Text = "Delete";
+            this.sfButton3.UseVisualStyleBackColor = false;
+            // 
+            // sfButton2
+            // 
+            this.sfButton2.AccessibleName = "Button";
+            this.sfButton2.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton2.Location = new System.Drawing.Point(450, 115);
+            this.sfButton2.Name = "sfButton2";
+            this.sfButton2.Size = new System.Drawing.Size(96, 28);
+            this.sfButton2.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.TabIndex = 35;
+            this.sfButton2.Text = "Edit";
+            this.sfButton2.UseVisualStyleBackColor = false;
             // 
             // txtWeight
             // 
@@ -162,18 +194,6 @@
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(94, 20);
             this.txtWeight.TabIndex = 7;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Location = new System.Drawing.Point(630, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 35);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Update Stock";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -183,18 +203,6 @@
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 31;
             this.label17.Text = "Weight";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(742, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 35);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // txtPiecePack
             // 
@@ -301,6 +309,7 @@
             this.txtQty.Enabled = false;
             this.txtQty.Location = new System.Drawing.Point(742, 37);
             this.txtQty.Name = "txtQty";
+            this.txtQty.ReadOnly = true;
             this.txtQty.Size = new System.Drawing.Size(63, 20);
             this.txtQty.TabIndex = 10;
             // 
@@ -466,13 +475,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtPiecePack;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtSPP;
@@ -502,5 +506,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton5;
+        private Syncfusion.WinForms.Controls.SfButton sfButton1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton4;
+        private Syncfusion.WinForms.Controls.SfButton sfButton3;
+        private Syncfusion.WinForms.Controls.SfButton sfButton2;
     }
 }

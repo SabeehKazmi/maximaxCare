@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,19 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Define Test";
+            // 
+            // sfButton1
+            // 
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(143, 161);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(73, 28);
+            this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.TabIndex = 8;
+            this.sfButton1.Text = "Add";
+            this.sfButton1.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -84,16 +97,6 @@
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Disease";
-            // 
-            // sfButton1
-            // 
-            this.sfButton1.AccessibleName = "Button";
-            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton1.Location = new System.Drawing.Point(143, 161);
-            this.sfButton1.Name = "sfButton1";
-            this.sfButton1.Size = new System.Drawing.Size(73, 28);
-            this.sfButton1.TabIndex = 8;
-            this.sfButton1.Text = "Add";
             // 
             // AddTest
             // 

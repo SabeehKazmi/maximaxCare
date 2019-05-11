@@ -24,7 +24,20 @@ namespace MaximaxCare
 
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Stock s = new Stock();
+            s.Show();
+        }
 
+        private void addCateguryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCat ac = new AddCat();
+            ac.Show();
+        }
+
+        private void addMedicineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMed am = new AddMed();
+            am.Show();
         }
     }
 }

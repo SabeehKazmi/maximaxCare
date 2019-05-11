@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,11 +41,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.txtDrugs = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.txtPtRef = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -67,11 +67,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.sfButton2);
+            this.groupBox2.Controls.Add(this.sfButton3);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
@@ -85,14 +85,31 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total";
             // 
-            // button6
+            // sfButton2
             // 
-            this.button6.Location = new System.Drawing.Point(227, 151);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 85;
-            this.button6.Text = "Print";
-            this.button6.UseVisualStyleBackColor = true;
+            this.sfButton2.AccessibleName = "Button";
+            this.sfButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton2.Location = new System.Drawing.Point(187, 146);
+            this.sfButton2.Name = "sfButton2";
+            this.sfButton2.Size = new System.Drawing.Size(96, 28);
+            this.sfButton2.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton2.TabIndex = 96;
+            this.sfButton2.Text = "Print";
+            this.sfButton2.UseVisualStyleBackColor = false;
+            // 
+            // sfButton3
+            // 
+            this.sfButton3.AccessibleName = "Button";
+            this.sfButton3.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton3.Location = new System.Drawing.Point(289, 146);
+            this.sfButton3.Name = "sfButton3";
+            this.sfButton3.Size = new System.Drawing.Size(96, 28);
+            this.sfButton3.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.TabIndex = 97;
+            this.sfButton3.Text = "Submit";
+            this.sfButton3.UseVisualStyleBackColor = false;
             // 
             // textBox4
             // 
@@ -120,15 +137,6 @@
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 75;
             this.label4.Text = "Total";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(303, 151);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 83;
-            this.button5.Text = "Submit";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -190,21 +198,11 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(201, 20);
             this.dateTimePicker1.TabIndex = 92;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(487, 87);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 91;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.sfButton1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtDrugs);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label22);
@@ -219,6 +217,19 @@
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Medicine";
+            // 
+            // sfButton1
+            // 
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(544, 48);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(96, 21);
+            this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.TabIndex = 96;
+            this.sfButton1.Text = "Add";
+            this.sfButton1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -236,15 +247,6 @@
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 71;
             this.label3.Text = "Price";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(550, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // txtDrugs
             // 
@@ -326,6 +328,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(504, 250);
             this.dataGridView2.Name = "dataGridView2";
@@ -334,6 +338,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(81, 250);
             this.dataGridView1.Name = "dataGridView1";
@@ -365,15 +371,28 @@
             this.label1.TabIndex = 94;
             this.label1.Text = "Pt.Ref.No";
             // 
+            // sfButton8
+            // 
+            this.sfButton8.AccessibleName = "Button";
+            this.sfButton8.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton8.Location = new System.Drawing.Point(499, 89);
+            this.sfButton8.Name = "sfButton8";
+            this.sfButton8.Size = new System.Drawing.Size(96, 20);
+            this.sfButton8.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.TabIndex = 95;
+            this.sfButton8.Text = "Search";
+            this.sfButton8.UseVisualStyleBackColor = false;
+            // 
             // PointofSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 755);
+            this.Controls.Add(this.sfButton8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -396,11 +415,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
@@ -408,11 +425,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtDrugs;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label22;
@@ -426,5 +441,9 @@
         private System.Windows.Forms.TextBox txtPtRef;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton8;
+        private Syncfusion.WinForms.Controls.SfButton sfButton2;
+        private Syncfusion.WinForms.Controls.SfButton sfButton3;
     }
 }

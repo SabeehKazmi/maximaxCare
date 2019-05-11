@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MaximaxCare
 {
-    public partial class Splash : MetroFramework.Forms.MetroForm
+    public partial class Splash : Form //MetroFramework.Forms.MetroForm
     {
         public Splash()
         {
@@ -19,7 +19,7 @@ namespace MaximaxCare
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
         }
     }
 }

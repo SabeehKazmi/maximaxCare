@@ -60,10 +60,13 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Core.WinForms, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DataSource.WinForms, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Base, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Licensing, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=632609b4d040f6b4" />
     <Reference Include="Syncfusion.SfInput.WinForms, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.Base, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.Windows, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.SpellChecker.Base, Version=16.4460.0.52, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -115,17 +118,17 @@
     <Compile Include="AddTest.Designer.cs">
       <DependentUpon>AddTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddUser.Designer.cs">
-      <DependentUpon>AddUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetP.Designer.cs">
+      <DependentUpon>ForgetP.cs</DependentUpon>
     </Compile>
     <Compile Include="HRMS.cs">
       <SubType>Form</SubType>
@@ -163,6 +166,7 @@
     <Compile Include="PointofSale.Designer.cs">
       <DependentUpon>PointofSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repo.cs" />
     <Compile Include="Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,12 +184,6 @@
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Signup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Signup.Designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -216,11 +214,11 @@
     <EmbeddedResource Include="AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUser.resx">
-      <DependentUpon>AddUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetP.resx">
+      <DependentUpon>ForgetP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRMS.resx">
       <DependentUpon>HRMS.cs</DependentUpon>
@@ -248,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Signup.resx">
-      <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

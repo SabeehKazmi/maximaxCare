@@ -41,12 +41,12 @@
             // sfButton1
             // 
             this.sfButton1.AccessibleName = "Button";
-            this.sfButton1.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.BackColor = System.Drawing.Color.White;
             this.sfButton1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sfButton1.Location = new System.Drawing.Point(70, 275);
             this.sfButton1.Name = "sfButton1";
             this.sfButton1.Size = new System.Drawing.Size(157, 141);
-            this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton1.Style.BackColor = System.Drawing.Color.White;
             this.sfButton1.TabIndex = 0;
             this.sfButton1.Text = "Sign Up";
             this.sfButton1.UseVisualStyleBackColor = false;
@@ -55,15 +55,16 @@
             // sfButton2
             // 
             this.sfButton2.AccessibleName = "Button";
-            this.sfButton2.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.BackColor = System.Drawing.Color.White;
             this.sfButton2.Font = new System.Drawing.Font("Courier New", 14.25F);
             this.sfButton2.Location = new System.Drawing.Point(594, 275);
             this.sfButton2.Name = "sfButton2";
             this.sfButton2.Size = new System.Drawing.Size(157, 141);
-            this.sfButton2.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.Style.BackColor = System.Drawing.Color.White;
             this.sfButton2.TabIndex = 1;
             this.sfButton2.Text = "Returning";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // sfButton3
             // 
@@ -77,6 +78,7 @@
             this.sfButton3.TabIndex = 2;
             this.sfButton3.Text = "Patient Management";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton4
             // 
@@ -90,6 +92,7 @@
             this.sfButton4.TabIndex = 3;
             this.sfButton4.Text = "Point of Sale";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // sfButton5
             // 
@@ -118,6 +121,7 @@
             this.sfButton6.TabIndex = 5;
             this.sfButton6.Text = "HRMS";
             this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click);
             // 
             // sfButton7
             // 
@@ -131,6 +135,7 @@
             this.sfButton7.TabIndex = 6;
             this.sfButton7.Text = "Accounts";
             this.sfButton7.UseVisualStyleBackColor = false;
+            this.sfButton7.Click += new System.EventHandler(this.sfButton7_Click);
             // 
             // sfButton8
             // 
@@ -144,6 +149,7 @@
             this.sfButton8.TabIndex = 7;
             this.sfButton8.Text = "User Settings";
             this.sfButton8.UseVisualStyleBackColor = false;
+            this.sfButton8.Click += new System.EventHandler(this.sfButton8_Click);
             // 
             // Panel
             // 

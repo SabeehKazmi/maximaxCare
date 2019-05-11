@@ -35,7 +35,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Sr_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -80,6 +80,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sr_No});
@@ -96,7 +98,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.sfButton8);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -109,17 +111,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reporting";
             // 
-            // button4
+            // sfButton8
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Location = new System.Drawing.Point(354, 42);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 26);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Print";
-            this.button4.UseVisualStyleBackColor = false;
+            this.sfButton8.AccessibleName = "Button";
+            this.sfButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton8.Location = new System.Drawing.Point(364, 42);
+            this.sfButton8.Name = "sfButton8";
+            this.sfButton8.Size = new System.Drawing.Size(96, 28);
+            this.sfButton8.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton8.TabIndex = 18;
+            this.sfButton8.Text = "Print";
+            this.sfButton8.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -185,10 +188,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sr_No;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
+        private Syncfusion.WinForms.Controls.SfButton sfButton8;
     }
 }
