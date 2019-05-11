@@ -41,14 +41,14 @@
             // sfButton1
             // 
             this.sfButton1.AccessibleName = "Button";
-            this.sfButton1.BackColor = System.Drawing.Color.White;
+            this.sfButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sfButton1.Location = new System.Drawing.Point(70, 275);
+            this.sfButton1.Location = new System.Drawing.Point(317, 441);
             this.sfButton1.Name = "sfButton1";
-            this.sfButton1.Size = new System.Drawing.Size(157, 141);
-            this.sfButton1.Style.BackColor = System.Drawing.Color.White;
+            this.sfButton1.Size = new System.Drawing.Size(157, 57);
+            this.sfButton1.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton1.TabIndex = 0;
-            this.sfButton1.Text = "Sign Up";
+            this.sfButton1.Text = "Log Out";
             this.sfButton1.UseVisualStyleBackColor = false;
             this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
@@ -57,9 +57,9 @@
             this.sfButton2.AccessibleName = "Button";
             this.sfButton2.BackColor = System.Drawing.Color.White;
             this.sfButton2.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton2.Location = new System.Drawing.Point(594, 275);
+            this.sfButton2.Location = new System.Drawing.Point(70, 441);
             this.sfButton2.Name = "sfButton2";
-            this.sfButton2.Size = new System.Drawing.Size(157, 141);
+            this.sfButton2.Size = new System.Drawing.Size(157, 35);
             this.sfButton2.Style.BackColor = System.Drawing.Color.White;
             this.sfButton2.TabIndex = 1;
             this.sfButton2.Text = "Returning";
@@ -73,7 +73,7 @@
             this.sfButton3.Font = new System.Drawing.Font("Courier New", 14.25F);
             this.sfButton3.Location = new System.Drawing.Point(465, 93);
             this.sfButton3.Name = "sfButton3";
-            this.sfButton3.Size = new System.Drawing.Size(286, 141);
+            this.sfButton3.Size = new System.Drawing.Size(286, 98);
             this.sfButton3.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.TabIndex = 2;
             this.sfButton3.Text = "Patient Management";
@@ -85,9 +85,9 @@
             this.sfButton4.AccessibleName = "Button";
             this.sfButton4.BackColor = System.Drawing.Color.Gold;
             this.sfButton4.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton4.Location = new System.Drawing.Point(317, 275);
+            this.sfButton4.Location = new System.Drawing.Point(317, 197);
             this.sfButton4.Name = "sfButton4";
-            this.sfButton4.Size = new System.Drawing.Size(157, 141);
+            this.sfButton4.Size = new System.Drawing.Size(157, 91);
             this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
             this.sfButton4.TabIndex = 3;
             this.sfButton4.Text = "Point of Sale";
@@ -101,7 +101,7 @@
             this.sfButton5.Font = new System.Drawing.Font("Courier New", 14.25F);
             this.sfButton5.Location = new System.Drawing.Point(70, 93);
             this.sfButton5.Name = "sfButton5";
-            this.sfButton5.Size = new System.Drawing.Size(257, 141);
+            this.sfButton5.Size = new System.Drawing.Size(257, 98);
             this.sfButton5.Style.BackColor = System.Drawing.Color.Gold;
             this.sfButton5.TabIndex = 4;
             this.sfButton5.Text = "Inventory Control";
@@ -114,7 +114,7 @@
             this.sfButton6.AccessibleName = "Button";
             this.sfButton6.BackColor = System.Drawing.Color.Gold;
             this.sfButton6.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton6.Location = new System.Drawing.Point(70, 452);
+            this.sfButton6.Location = new System.Drawing.Point(70, 294);
             this.sfButton6.Name = "sfButton6";
             this.sfButton6.Size = new System.Drawing.Size(157, 141);
             this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
@@ -128,7 +128,7 @@
             this.sfButton7.AccessibleName = "Button";
             this.sfButton7.BackColor = System.Drawing.Color.Gold;
             this.sfButton7.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton7.Location = new System.Drawing.Point(317, 452);
+            this.sfButton7.Location = new System.Drawing.Point(317, 294);
             this.sfButton7.Name = "sfButton7";
             this.sfButton7.Size = new System.Drawing.Size(157, 141);
             this.sfButton7.Style.BackColor = System.Drawing.Color.Gold;
@@ -142,7 +142,7 @@
             this.sfButton8.AccessibleName = "Button";
             this.sfButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton8.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton8.Location = new System.Drawing.Point(594, 452);
+            this.sfButton8.Location = new System.Drawing.Point(594, 294);
             this.sfButton8.Name = "sfButton8";
             this.sfButton8.Size = new System.Drawing.Size(157, 141);
             this.sfButton8.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 645);
+            this.ClientSize = new System.Drawing.Size(846, 522);
             this.Controls.Add(this.sfButton8);
             this.Controls.Add(this.sfButton7);
             this.Controls.Add(this.sfButton6);
@@ -165,7 +165,7 @@
             this.Controls.Add(this.sfButton2);
             this.Controls.Add(this.sfButton1);
             this.Name = "Panel";
-            this.Text = "Panel";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Panel_Load);
             this.ResumeLayout(false);
 

@@ -51,7 +51,8 @@ namespace MaximaxCare
                                 dr = (MessageBox.Show("Data Saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information));
                                 textBox1.Clear();
                                 textBox2.Clear();
-                                textBox3.Clear();query = "select * from author";
+                                textBox3.Clear();
+                                query = "select * from author";
                                 ds = rp.getdata(query);
                                 dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                             }
@@ -122,7 +123,8 @@ namespace MaximaxCare
                     dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
                     textBox1.Clear();
                     textBox2.Clear();
-                    textBox3.Clear(); query = "select * from author";
+                    textBox3.Clear();
+                    query = "select * from author";
                     ds = rp.getdata(query);
                     dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                 }

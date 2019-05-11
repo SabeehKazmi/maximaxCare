@@ -16,7 +16,7 @@ namespace MaximaxCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Settings());
+            Application.Run(new AddMed());
         }
     }
 }

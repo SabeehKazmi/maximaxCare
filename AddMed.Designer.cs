@@ -79,6 +79,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1040, 355);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
@@ -141,7 +142,7 @@
             this.sfButton1.AccessibleName = "Button";
             this.sfButton1.BackColor = System.Drawing.Color.Gold;
             this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton1.Location = new System.Drawing.Point(757, 115);
+            this.sfButton1.Location = new System.Drawing.Point(450, 115);
             this.sfButton1.Name = "sfButton1";
             this.sfButton1.Size = new System.Drawing.Size(96, 28);
             this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
@@ -167,7 +168,7 @@
             this.sfButton3.AccessibleName = "Button";
             this.sfButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton3.Location = new System.Drawing.Point(552, 115);
+            this.sfButton3.Location = new System.Drawing.Point(757, 115);
             this.sfButton3.Name = "sfButton3";
             this.sfButton3.Size = new System.Drawing.Size(96, 28);
             this.sfButton3.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
@@ -180,7 +181,7 @@
             this.sfButton2.AccessibleName = "Button";
             this.sfButton2.BackColor = System.Drawing.Color.Gold;
             this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton2.Location = new System.Drawing.Point(450, 115);
+            this.sfButton2.Location = new System.Drawing.Point(552, 115);
             this.sfButton2.Name = "sfButton2";
             this.sfButton2.Size = new System.Drawing.Size(96, 28);
             this.sfButton2.Style.BackColor = System.Drawing.Color.Gold;
@@ -461,7 +462,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddMed";
-            this.Text = "AddMed";
+            this.Text = "Medicine Log";
             this.Load += new System.EventHandler(this.AddMed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

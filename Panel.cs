@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace MaximaxCare
 {
+    
     public partial class Panel : MetroFramework.Forms.MetroForm
     {
+        DialogResult dr = new DialogResult();
         public Panel()
         {
             InitializeComponent();
@@ -19,9 +21,8 @@ namespace MaximaxCare
 
         private void Panel_Load(object sender, EventArgs e)
         {
-
+            
         }
-
         private void sfButton5_Click(object sender, EventArgs e)
         {
             Inventory In = new Inventory();
@@ -30,7 +31,13 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
-          
+            dr = (MessageBox.Show("Really want out?","Log Out", MessageBoxButtons.YesNo,MessageBoxIcon.Warning));
+            if (dr == DialogResult.Yes)
+            {
+                this.Hide();
+                Authorization a = new Authorization();
+                a.Show();
+            }
         }
 
         private void sfButton4_Click(object sender, EventArgs e)
