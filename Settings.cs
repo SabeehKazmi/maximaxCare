@@ -49,6 +49,11 @@ namespace MaximaxCare
                             {
                                 rp.savdelup(query);
                                 dr = (MessageBox.Show("Data Saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                                textBox1.Clear();
+                                textBox2.Clear();
+                                textBox3.Clear();query = "select * from author";
+                                ds = rp.getdata(query);
+                                dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                             }
                             catch (Exception ex)
                             {
@@ -78,7 +83,7 @@ namespace MaximaxCare
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -115,6 +120,11 @@ namespace MaximaxCare
                     query = "DELETE FROM author WHERE E_Mail = '" + textBox3.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear(); query = "select * from author";
+                    ds = rp.getdata(query);
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                 }
                 catch (Exception ex)
                 {
@@ -131,7 +141,7 @@ namespace MaximaxCare
 
         private void sfButton4_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void sfButton1_Click(object sender, EventArgs e)
@@ -143,6 +153,11 @@ namespace MaximaxCare
                     query = "UPDATE author SET User_Name = '" + textBox1.Text + "', Password = '" + textBox2.Text + "', Date = '" + dateTimePicker1.Text + "', Role = '" + comboBox1.Text + "', E_Mail = '" + textBox3.Text + "' WHERE E_Mail = '" + textBox3.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Updated Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear(); query = "select * from author";
+                    ds = rp.getdata(query);
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                 }
                 catch (Exception ex)
                 {
@@ -160,6 +175,61 @@ namespace MaximaxCare
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            query = "select * from author where User_Name Like '" + textBox4.Text + "%'";
+            ds = rp.getdata(query);
+            r = ds.Tables["0"].Rows.Count;
+            if (r > 0)
+            {
+                dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+            }
+            else
+            {
+                query = "select * from author where Password Like '" + textBox4.Text + "%'";
+                ds = rp.getdata(query);
+                r = ds.Tables["0"].Rows.Count;
+                if (r > 0)
+                {
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                }
+                else
+                {
+                    query = "select * from author where E_Mail Like '" + textBox4.Text + "%'";
+                    ds = rp.getdata(query);
+                    r = ds.Tables["0"].Rows.Count;
+                    if (r > 0)
+                    {
+                        dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                    }
+                    else
+                    {
+                        query = "select * from author where Role Like '" + textBox4.Text + "%'";
+                        ds = rp.getdata(query);
+                        r = ds.Tables["0"].Rows.Count;
+                        if (r > 0)
+                        {
+                            dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                        }
+                        else
+                        {
+                            query = "select * from author where Date Like '" + textBox4.Text + "%'";
+                            ds = rp.getdata(query);
+                            r = ds.Tables["0"].Rows.Count;
+                            if (r > 0)
+                            {
+                                dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nothing exist.", "No Record Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -39,11 +41,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
-            this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +80,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User_Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(612, 27);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(145, 23);
+            this.textBox3.TabIndex = 9;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(563, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "E-Mail";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 
@@ -160,7 +180,7 @@
             this.sfButton1.AccessibleName = "Button";
             this.sfButton1.BackColor = System.Drawing.Color.Gold;
             this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton1.Location = new System.Drawing.Point(839, 363);
+            this.sfButton1.Location = new System.Drawing.Point(839, 305);
             this.sfButton1.Name = "sfButton1";
             this.sfButton1.Size = new System.Drawing.Size(96, 28);
             this.sfButton1.Style.BackColor = System.Drawing.Color.Gold;
@@ -169,26 +189,12 @@
             this.sfButton1.UseVisualStyleBackColor = false;
             this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
-            // sfButton4
-            // 
-            this.sfButton4.AccessibleName = "Button";
-            this.sfButton4.BackColor = System.Drawing.Color.Gold;
-            this.sfButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton4.Location = new System.Drawing.Point(839, 329);
-            this.sfButton4.Name = "sfButton4";
-            this.sfButton4.Size = new System.Drawing.Size(96, 28);
-            this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
-            this.sfButton4.TabIndex = 22;
-            this.sfButton4.Text = "Search";
-            this.sfButton4.UseVisualStyleBackColor = false;
-            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
-            // 
             // sfButton3
             // 
             this.sfButton3.AccessibleName = "Button";
             this.sfButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton3.Location = new System.Drawing.Point(839, 295);
+            this.sfButton3.Location = new System.Drawing.Point(839, 351);
             this.sfButton3.Name = "sfButton3";
             this.sfButton3.Size = new System.Drawing.Size(96, 28);
             this.sfButton3.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
@@ -211,32 +217,32 @@
             this.sfButton2.UseVisualStyleBackColor = false;
             this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
-            // label1
+            // textBox4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(563, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "E-Mail";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.textBox4.Location = new System.Drawing.Point(839, 23);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(128, 20);
+            this.textBox4.TabIndex = 10;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // label6
             // 
-            this.textBox3.Location = new System.Drawing.Point(612, 27);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 23);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(789, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Search:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 555);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.sfButton1);
-            this.Controls.Add(this.sfButton4);
             this.Controls.Add(this.sfButton3);
             this.Controls.Add(this.sfButton2);
             this.Controls.Add(this.dataGridView1);
@@ -248,6 +254,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,10 +270,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private Syncfusion.WinForms.Controls.SfButton sfButton1;
-        private Syncfusion.WinForms.Controls.SfButton sfButton4;
         private Syncfusion.WinForms.Controls.SfButton sfButton3;
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
     }
 }
