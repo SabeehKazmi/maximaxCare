@@ -149,6 +149,7 @@
             this.sfButton1.TabIndex = 36;
             this.sfButton1.Text = "Save";
             this.sfButton1.UseVisualStyleBackColor = false;
+            this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
             // sfButton4
             // 
@@ -162,6 +163,7 @@
             this.sfButton4.TabIndex = 37;
             this.sfButton4.Text = "Update Stock";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // sfButton3
             // 
@@ -175,6 +177,7 @@
             this.sfButton3.TabIndex = 34;
             this.sfButton3.Text = "Delete";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton2
             // 
@@ -188,6 +191,7 @@
             this.sfButton2.TabIndex = 35;
             this.sfButton2.Text = "Edit";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // txtWeight
             // 
@@ -195,6 +199,7 @@
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(94, 20);
             this.txtWeight.TabIndex = 7;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             // 
             // label17
             // 
@@ -211,6 +216,8 @@
             this.txtPiecePack.Name = "txtPiecePack";
             this.txtPiecePack.Size = new System.Drawing.Size(94, 20);
             this.txtPiecePack.TabIndex = 5;
+            this.txtPiecePack.Text = "0";
+            this.txtPiecePack.TextChanged += new System.EventHandler(this.txtPiecePack_TextChanged);
             // 
             // label16
             // 
@@ -228,6 +235,8 @@
             this.txtSPP.Name = "txtSPP";
             this.txtSPP.Size = new System.Drawing.Size(94, 20);
             this.txtSPP.TabIndex = 13;
+            this.txtSPP.Text = "0";
+            this.txtSPP.TextChanged += new System.EventHandler(this.txtSPP_TextChanged);
             // 
             // label9
             // 
@@ -245,6 +254,8 @@
             this.txtPPP.Name = "txtPPP";
             this.txtPPP.Size = new System.Drawing.Size(94, 20);
             this.txtPPP.TabIndex = 12;
+            this.txtPPP.Text = "0";
+            this.txtPPP.TextChanged += new System.EventHandler(this.txtPPP_TextChanged);
             // 
             // label15
             // 
@@ -262,6 +273,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(131, 20);
             this.dateTimePicker2.TabIndex = 15;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label7
             // 
@@ -274,11 +286,13 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(212, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
             this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label13
             // 
@@ -295,6 +309,8 @@
             this.txtReorderQty.Name = "txtReorderQty";
             this.txtReorderQty.Size = new System.Drawing.Size(75, 20);
             this.txtReorderQty.TabIndex = 11;
+            this.txtReorderQty.Text = "0";
+            this.txtReorderQty.TextChanged += new System.EventHandler(this.txtReorderQty_TextChanged);
             // 
             // label12
             // 
@@ -307,12 +323,12 @@
             // 
             // txtQty
             // 
-            this.txtQty.Enabled = false;
             this.txtQty.Location = new System.Drawing.Point(742, 37);
             this.txtQty.Name = "txtQty";
             this.txtQty.ReadOnly = true;
             this.txtQty.Size = new System.Drawing.Size(63, 20);
             this.txtQty.TabIndex = 10;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
             // label11
             // 
@@ -330,6 +346,8 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(64, 20);
             this.txtStock.TabIndex = 9;
+            this.txtStock.Text = "0";
+            this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             // 
             // label10
             // 
@@ -349,6 +367,7 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(107, 21);
             this.cmbCategory.TabIndex = 6;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -365,6 +384,8 @@
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(94, 20);
             this.txtSalePrice.TabIndex = 4;
+            this.txtSalePrice.Text = "0";
+            this.txtSalePrice.TextChanged += new System.EventHandler(this.txtSalePrice_TextChanged);
             // 
             // label5
             // 
@@ -381,6 +402,8 @@
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Size = new System.Drawing.Size(94, 20);
             this.txtPurchasePrice.TabIndex = 3;
+            this.txtPurchasePrice.Text = "0";
+            this.txtPurchasePrice.TextChanged += new System.EventHandler(this.txtPurchasePrice_TextChanged);
             // 
             // label4
             // 
@@ -397,6 +420,8 @@
             this.txtPinP.Name = "txtPinP";
             this.txtPinP.Size = new System.Drawing.Size(94, 20);
             this.txtPinP.TabIndex = 2;
+            this.txtPinP.Text = "0";
+            this.txtPinP.TextChanged += new System.EventHandler(this.txtPinP_TextChanged);
             // 
             // label3
             // 
@@ -413,6 +438,7 @@
             this.txtMed.Name = "txtMed";
             this.txtMed.Size = new System.Drawing.Size(131, 20);
             this.txtMed.TabIndex = 1;
+            this.txtMed.TextChanged += new System.EventHandler(this.txtMed_TextChanged);
             // 
             // label2
             // 
