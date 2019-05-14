@@ -48,6 +48,36 @@ namespace MaximaxCare
             {
                 dataGridView1.DataSource = ds.Tables["0"].DefaultView;
             }
+            else
+            {
+                query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Cat Like '" + txtMedi.Text + "%'";
+                ds = rp.getdata(query);
+                r = ds.Tables["0"].Rows.Count;
+                if (r > 0)
+                {
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                }
+                else
+                {
+                    query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Stock Like '" + txtMedi.Text + "%'";
+                    ds = rp.getdata(query);
+                    r = ds.Tables["0"].Rows.Count;
+                    if (r > 0)
+                    {
+                        dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                    }
+                    else
+                    {
+                        query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Exp_Date Like '" + txtMedi.Text + "%'";
+                        ds = rp.getdata(query);
+                        r = ds.Tables["0"].Rows.Count;
+                        if (r > 0)
+                        {
+                            dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                        }
+                    }
+                }
+            }
         }
     }
 }
