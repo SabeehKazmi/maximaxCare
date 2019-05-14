@@ -39,5 +39,10 @@ namespace MaximaxCare
             AddMed am = new AddMed();
             am.Show();
         }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

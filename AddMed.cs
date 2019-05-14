@@ -29,6 +29,17 @@ namespace MaximaxCare
             query = "select * from medicine";
             ds = rp.getdata(query);
             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+            query = "select Cat from Catagory";
+            ds = rp.getdata(query);
+            for (int i = 0; i < ds.Tables["0"].Rows.Count; i++)
+            {
+                var val = ds.Tables["0"].Rows[i][0].ToString();
+                if (!cmbCategory.Items.Contains(val))
+                {
+                    cmbCategory.Items.Add(val);
+                }
+            }
+
         }
 
         private void label14_Click(object sender, EventArgs e)
