@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
@@ -84,24 +82,6 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(667, 605);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Total";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(702, 601);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 9;
             // 
             // tabPage2
             // 
@@ -294,15 +274,11 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Electricity",
-            "Fuel",
-            "PTCL",
-            "Others"});
             this.comboBox1.Location = new System.Drawing.Point(133, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox9
             // 
@@ -488,6 +464,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Add Expense Head";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // groupBox4
             // 
@@ -523,6 +500,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(266, 268);
             this.dataGridView3.TabIndex = 6;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // textBox1
             // 
@@ -530,6 +508,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // sfButton9
             // 
@@ -543,6 +522,7 @@
             this.sfButton9.TabIndex = 5;
             this.sfButton9.Text = "Update";
             this.sfButton9.UseVisualStyleBackColor = false;
+            this.sfButton9.Click += new System.EventHandler(this.sfButton9_Click);
             // 
             // sfButton6
             // 
@@ -570,6 +550,7 @@
             this.sfButton8.TabIndex = 4;
             this.sfButton8.Text = "Delete";
             this.sfButton8.UseVisualStyleBackColor = false;
+            this.sfButton8.Click += new System.EventHandler(this.sfButton8_Click);
             // 
             // sfButton7
             // 
@@ -583,14 +564,13 @@
             this.sfButton7.TabIndex = 3;
             this.sfButton7.Text = "Save";
             this.sfButton7.UseVisualStyleBackColor = false;
+            this.sfButton7.Click += new System.EventHandler(this.sfButton7_Click);
             // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 655);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tabControl1);
             this.Name = "Accounts";
             this.Text = "Accounts";
@@ -611,14 +591,10 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
         private Syncfusion.WinForms.Controls.SfButton sfButton5;

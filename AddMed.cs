@@ -14,7 +14,7 @@ namespace MaximaxCare
     {
         Repo rp = new Repo();
         DataSet ds = new DataSet();
-        String query;
+        String query, query1;
         int r;
         DialogResult dr = new DialogResult();
         float PiP, QPP, qty, pPrice, sPrice, ReorderP, ppp, spp, stock;
@@ -306,9 +306,17 @@ namespace MaximaxCare
                                                         "', '" + txtSPP.Text + 
                                                         "', '" + dateTimePicker2.Text + 
                                                         "', '" + dateTimePicker1.Text + "')";
+                                                    string med = "Medicine";
+                                                    query1 = "INSERT INTO Expense (Date, Expense_Head, Expense_Amount, Med_Name, Qty) " +
+                                                        "VALUES ('" + dateTimePicker1.Text +
+                                                        "', '" + med +
+                                                        "', '" + txtPurchasePrice.Text +
+                                                        "', '" + txtMed.Text +
+                                                        "', '" + txtQty.Text + "')";
                                                     try
                                                     {
                                                         rp.savdelup(query);
+                                                        rp.savdelup(query1);
                                                         dr = (MessageBox.Show("Data Saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information));
                                                         txtMed.Clear(); txtPinP.Clear(); txtPiecePack.Clear(); txtQty.Clear(); txtPurchasePrice.Clear(); txtSalePrice.Clear(); txtWeight.Clear();
                                                         txtReorderQty.Clear(); txtStock.Clear(); txtPPP.Clear(); txtSPP.Clear();

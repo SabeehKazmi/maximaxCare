@@ -75,6 +75,10 @@ namespace MaximaxCare
                         {
                             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
                         }
+                        else
+                        {
+                            dataGridView1.DataSource = "";
+                        }
                     }
                 }
             }

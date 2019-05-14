@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
-            this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
@@ -52,20 +51,6 @@
             this.sfButton1.UseVisualStyleBackColor = false;
             this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
-            // sfButton2
-            // 
-            this.sfButton2.AccessibleName = "Button";
-            this.sfButton2.BackColor = System.Drawing.Color.White;
-            this.sfButton2.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton2.Location = new System.Drawing.Point(70, 441);
-            this.sfButton2.Name = "sfButton2";
-            this.sfButton2.Size = new System.Drawing.Size(157, 35);
-            this.sfButton2.Style.BackColor = System.Drawing.Color.White;
-            this.sfButton2.TabIndex = 1;
-            this.sfButton2.Text = "Returning";
-            this.sfButton2.UseVisualStyleBackColor = false;
-            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
-            // 
             // sfButton3
             // 
             this.sfButton3.AccessibleName = "Button";
@@ -83,12 +68,12 @@
             // sfButton4
             // 
             this.sfButton4.AccessibleName = "Button";
-            this.sfButton4.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton4.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton4.Location = new System.Drawing.Point(317, 197);
+            this.sfButton4.Location = new System.Drawing.Point(279, 197);
             this.sfButton4.Name = "sfButton4";
-            this.sfButton4.Size = new System.Drawing.Size(157, 91);
-            this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.Size = new System.Drawing.Size(242, 144);
+            this.sfButton4.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton4.TabIndex = 3;
             this.sfButton4.Text = "Point of Sale";
             this.sfButton4.UseVisualStyleBackColor = false;
@@ -97,12 +82,12 @@
             // sfButton5
             // 
             this.sfButton5.AccessibleName = "Button";
-            this.sfButton5.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton5.Font = new System.Drawing.Font("Courier New", 14.25F);
             this.sfButton5.Location = new System.Drawing.Point(70, 93);
             this.sfButton5.Name = "sfButton5";
             this.sfButton5.Size = new System.Drawing.Size(257, 98);
-            this.sfButton5.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton5.TabIndex = 4;
             this.sfButton5.Text = "Inventory Control";
             this.sfButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -112,12 +97,12 @@
             // sfButton6
             // 
             this.sfButton6.AccessibleName = "Button";
-            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton6.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton6.Location = new System.Drawing.Point(70, 294);
+            this.sfButton6.Location = new System.Drawing.Point(70, 347);
             this.sfButton6.Name = "sfButton6";
-            this.sfButton6.Size = new System.Drawing.Size(157, 141);
-            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Size = new System.Drawing.Size(241, 88);
+            this.sfButton6.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton6.TabIndex = 5;
             this.sfButton6.Text = "HRMS";
             this.sfButton6.UseVisualStyleBackColor = false;
@@ -126,12 +111,12 @@
             // sfButton7
             // 
             this.sfButton7.AccessibleName = "Button";
-            this.sfButton7.BackColor = System.Drawing.Color.Gold;
+            this.sfButton7.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton7.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton7.Location = new System.Drawing.Point(317, 294);
+            this.sfButton7.Location = new System.Drawing.Point(317, 347);
             this.sfButton7.Name = "sfButton7";
-            this.sfButton7.Size = new System.Drawing.Size(157, 141);
-            this.sfButton7.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton7.Size = new System.Drawing.Size(157, 88);
+            this.sfButton7.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton7.TabIndex = 6;
             this.sfButton7.Text = "Accounts";
             this.sfButton7.UseVisualStyleBackColor = false;
@@ -140,12 +125,12 @@
             // sfButton8
             // 
             this.sfButton8.AccessibleName = "Button";
-            this.sfButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton8.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton8.Location = new System.Drawing.Point(594, 294);
+            this.sfButton8.Location = new System.Drawing.Point(480, 347);
             this.sfButton8.Name = "sfButton8";
-            this.sfButton8.Size = new System.Drawing.Size(157, 141);
-            this.sfButton8.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.sfButton8.Size = new System.Drawing.Size(271, 88);
+            this.sfButton8.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.TabIndex = 7;
             this.sfButton8.Text = "User Settings";
             this.sfButton8.UseVisualStyleBackColor = false;
@@ -162,7 +147,6 @@
             this.Controls.Add(this.sfButton5);
             this.Controls.Add(this.sfButton4);
             this.Controls.Add(this.sfButton3);
-            this.Controls.Add(this.sfButton2);
             this.Controls.Add(this.sfButton1);
             this.Name = "Panel";
             this.Text = "Dashboard";
@@ -174,7 +158,6 @@
         #endregion
 
         private Syncfusion.WinForms.Controls.SfButton sfButton1;
-        private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private Syncfusion.WinForms.Controls.SfButton sfButton3;
         private Syncfusion.WinForms.Controls.SfButton sfButton4;
         private Syncfusion.WinForms.Controls.SfButton sfButton5;
