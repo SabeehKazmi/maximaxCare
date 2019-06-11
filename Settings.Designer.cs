@@ -45,6 +45,7 @@
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -235,11 +236,26 @@
             this.label6.Text = "Search:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // sfButton4
+            // 
+            this.sfButton4.AccessibleName = "Button";
+            this.sfButton4.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton4.Location = new System.Drawing.Point(973, 23);
+            this.sfButton4.Name = "sfButton4";
+            this.sfButton4.Size = new System.Drawing.Size(96, 20);
+            this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.TabIndex = 23;
+            this.sfButton4.Text = "Panel";
+            this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click_1);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 555);
+            this.Controls.Add(this.sfButton4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.sfButton1);
@@ -276,5 +292,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
+        private Syncfusion.WinForms.Controls.SfButton sfButton4;
     }
 }

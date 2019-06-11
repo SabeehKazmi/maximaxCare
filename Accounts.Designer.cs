@@ -66,6 +66,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton7 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -514,11 +515,26 @@
             this.sfButton7.UseVisualStyleBackColor = false;
             this.sfButton7.Click += new System.EventHandler(this.sfButton7_Click);
             // 
+            // sfButton6
+            // 
+            this.sfButton6.AccessibleName = "Button";
+            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton6.Location = new System.Drawing.Point(7, 629);
+            this.sfButton6.Name = "sfButton6";
+            this.sfButton6.Size = new System.Drawing.Size(96, 18);
+            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.TabIndex = 31;
+            this.sfButton6.Text = "Panel";
+            this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click_1);
+            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 655);
+            this.Controls.Add(this.sfButton6);
             this.Controls.Add(this.tabControl1);
             this.Name = "Accounts";
             this.Text = "Accounts";
@@ -581,5 +597,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton7;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private Syncfusion.WinForms.Controls.SfButton sfButton6;
     }
 }

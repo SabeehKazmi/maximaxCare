@@ -97,5 +97,12 @@ namespace MaximaxCare
                 textBox1.Focus();
             }
         }
+
+        private void sfButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inventory i = new Inventory();
+            i.Show();
+        }
     }
 }

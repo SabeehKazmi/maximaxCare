@@ -41,12 +41,13 @@
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -212,6 +213,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fee_Management";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(122, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(163, 23);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(119, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Patient_Type_Des";
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(306, 48);
@@ -247,28 +265,26 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Patient_Type";
             // 
-            // textBox2
+            // sfButton4
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 23);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Patient_Type_Des";
+            this.sfButton4.AccessibleName = "Button";
+            this.sfButton4.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton4.Location = new System.Drawing.Point(716, 13);
+            this.sfButton4.Name = "sfButton4";
+            this.sfButton4.Size = new System.Drawing.Size(96, 18);
+            this.sfButton4.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton4.TabIndex = 16;
+            this.sfButton4.Text = "Patient";
+            this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // PatientType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 491);
+            this.Controls.Add(this.sfButton4);
             this.Controls.Add(this.tabControl1);
             this.Name = "PatientType";
             this.Text = "PatientType";
@@ -305,5 +321,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton4;
     }
 }

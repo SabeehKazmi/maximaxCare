@@ -250,6 +250,13 @@ namespace MaximaxCare
 
         }
 
+        private void sfButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Panel p = new Panel();
+            p.Show();
+        }
+
         private void sfButton7_Click(object sender, EventArgs e)
         {
             //it status the employee as paid
@@ -265,6 +272,9 @@ namespace MaximaxCare
                 query = "select * from Employee";
                 ds = rp.getdata(query);
                 dataGridView2.DataSource = ds.Tables["0"].DefaultView;
+                //add to expense
+                query = "INSERT INTO Expense (Date, Expense_Head, Expense_Amount) " +
+                                                       "VALUES ('" + dateTimePicker3.Text +"', 'Salary', '" + textBox8.Text + "')";
             }
         }
     }

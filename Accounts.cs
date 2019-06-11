@@ -169,7 +169,9 @@ namespace MaximaxCare
 
         private void sfButton4_Click(object sender, EventArgs e)
         {
-            //searching into 4 cataguries
+            this.Close();
+            Panel p = new Panel();
+            p.Show();//searching into 4 cataguries
             if ( comboBox3.Text == "Total Profit")
             {
                 // profit table show
@@ -199,10 +201,19 @@ namespace MaximaxCare
                     {
                         if (comboBox3.Text == "Profit over Medicine")
                         {
-                            //profit from patients
-                            query = "select * from Profit where Fee == '' and Date >= '" + dateTimePicker2.Text + "' and Date <= '" + dateTimePicker3.Text + "'";
-                            ds = rp.getdata(query);
-                            dataGridView2.DataSource = ds.Tables["0"].DefaultView;
+                            try
+                            {
+                                //profit from medicines
+                                query = "select * from Profit where Fee = '' and Date >= '" + dateTimePicker2.Text + "' and Date <= '" + dateTimePicker3.Text + "'";
+                                ds = rp.getdata(query);
+                                dataGridView2.DataSource = ds.Tables["0"].DefaultView;
+                            }
+                            catch (Exception ex)
+                            {
+
+                                MessageBox.Show(ex.Message);
+                            }
+                            
                         }
                         else
                         {
@@ -281,6 +292,13 @@ namespace MaximaxCare
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void sfButton6_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Panel p = new Panel();
+            p.Show();
         }
     }
 }

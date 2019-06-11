@@ -299,6 +299,13 @@ namespace MaximaxCare
 
         }
 
+        private void sfButton8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Patient p = new Patient();
+            p.Show();
+        }
+
         private void txtSr_TextChanged(object sender, EventArgs e)
         {
 

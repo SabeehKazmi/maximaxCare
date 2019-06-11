@@ -220,6 +220,13 @@ namespace MaximaxCare
             }
         }
 
+        private void sfButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inventory i = new Inventory();
+            i.Show();
+        }
+
         private void sfButton3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")

@@ -57,6 +57,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxAdv1 = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             this.sfButton7 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
@@ -69,7 +70,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkBoxAdv1 = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
+            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -405,6 +406,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Salary_Info";
             // 
+            // checkBoxAdv1
+            // 
+            this.checkBoxAdv1.BeforeTouchSize = new System.Drawing.Size(122, 25);
+            this.checkBoxAdv1.Location = new System.Drawing.Point(226, 223);
+            this.checkBoxAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(91)))));
+            this.checkBoxAdv1.Name = "checkBoxAdv1";
+            this.checkBoxAdv1.Size = new System.Drawing.Size(122, 25);
+            this.checkBoxAdv1.TabIndex = 22;
+            this.checkBoxAdv1.Text = "Paid";
+            this.checkBoxAdv1.ThemesEnabled = false;
+            this.checkBoxAdv1.CheckStateChanged += new System.EventHandler(this.checkBoxAdv1_CheckStateChanged);
+            // 
             // sfButton7
             // 
             this.sfButton7.AccessibleName = "Button";
@@ -526,23 +539,26 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Name";
             // 
-            // checkBoxAdv1
+            // sfButton6
             // 
-            this.checkBoxAdv1.BeforeTouchSize = new System.Drawing.Size(122, 25);
-            this.checkBoxAdv1.Location = new System.Drawing.Point(226, 223);
-            this.checkBoxAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(91)))));
-            this.checkBoxAdv1.Name = "checkBoxAdv1";
-            this.checkBoxAdv1.Size = new System.Drawing.Size(122, 25);
-            this.checkBoxAdv1.TabIndex = 22;
-            this.checkBoxAdv1.Text = "Paid";
-            this.checkBoxAdv1.ThemesEnabled = false;
-            this.checkBoxAdv1.CheckStateChanged += new System.EventHandler(this.checkBoxAdv1_CheckStateChanged);
+            this.sfButton6.AccessibleName = "Button";
+            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton6.Location = new System.Drawing.Point(976, 75);
+            this.sfButton6.Name = "sfButton6";
+            this.sfButton6.Size = new System.Drawing.Size(96, 21);
+            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.TabIndex = 27;
+            this.sfButton6.Text = "Panel";
+            this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click);
             // 
             // HRMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 661);
+            this.Controls.Add(this.sfButton6);
             this.Controls.Add(this.tabControl1);
             this.Name = "HRMS";
             this.Text = "HRMS";
@@ -605,5 +621,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox1;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv checkBoxAdv1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton6;
     }
 }

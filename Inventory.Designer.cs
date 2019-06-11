@@ -34,6 +34,9 @@
             this.addMedicineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +44,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.medicineToolStripMenuItem,
-            this.reportsToolStripMenuItem});
+            this.reportsToolStripMenuItem,
+            this.goBackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(919, 24);
@@ -60,14 +64,14 @@
             // addCateguryToolStripMenuItem
             // 
             this.addCateguryToolStripMenuItem.Name = "addCateguryToolStripMenuItem";
-            this.addCateguryToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.addCateguryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addCateguryToolStripMenuItem.Text = "Add Category";
             this.addCateguryToolStripMenuItem.Click += new System.EventHandler(this.addCateguryToolStripMenuItem_Click);
             // 
             // addMedicineToolStripMenuItem
             // 
             this.addMedicineToolStripMenuItem.Name = "addMedicineToolStripMenuItem";
-            this.addMedicineToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.addMedicineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addMedicineToolStripMenuItem.Text = "Add Medicine";
             this.addMedicineToolStripMenuItem.Click += new System.EventHandler(this.addMedicineToolStripMenuItem_Click);
             // 
@@ -86,6 +90,29 @@
             this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.panelToolStripMenuItem,
+            this.logOutToolStripMenuItem});
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.goBackToolStripMenuItem.Text = "Go Back?";
+            // 
+            // panelToolStripMenuItem
+            // 
+            this.panelToolStripMenuItem.Name = "panelToolStripMenuItem";
+            this.panelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.panelToolStripMenuItem.Text = "Panel";
+            this.panelToolStripMenuItem.Click += new System.EventHandler(this.panelToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // Inventory
             // 
@@ -112,5 +139,8 @@
         private System.Windows.Forms.ToolStripMenuItem addMedicineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem panelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

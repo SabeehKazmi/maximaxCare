@@ -33,6 +33,7 @@
             this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.txtMedi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -91,11 +92,26 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Search";
             // 
+            // sfButton6
+            // 
+            this.sfButton6.AccessibleName = "Button";
+            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton6.Location = new System.Drawing.Point(5, 502);
+            this.sfButton6.Name = "sfButton6";
+            this.sfButton6.Size = new System.Drawing.Size(96, 22);
+            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.TabIndex = 40;
+            this.sfButton6.Text = "Inventory";
+            this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click);
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 527);
+            this.Controls.Add(this.sfButton6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Stock";
@@ -115,5 +131,6 @@
         private System.Windows.Forms.TextBox txtMedi;
         private System.Windows.Forms.Label label2;
         private Syncfusion.WinForms.Controls.SfButton sfButton4;
+        private Syncfusion.WinForms.Controls.SfButton sfButton6;
     }
 }

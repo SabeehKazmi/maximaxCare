@@ -116,5 +116,12 @@ namespace MaximaxCare
         {
 
         }
+
+        private void sfButton3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Patient p = new Patient();
+            p.Show();
+        }
     }
 }

@@ -132,5 +132,12 @@ namespace MaximaxCare
         {
 
         }
+
+        private void sfButton8_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Panel p = new Panel();
+            p.Show();
+        }
     }
 }

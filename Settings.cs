@@ -244,5 +244,12 @@ namespace MaximaxCare
                 }
             }
         }
+
+        private void sfButton4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Panel p = new Panel();
+            p.Show();
+        }
     }
 }

@@ -91,6 +91,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -717,11 +718,26 @@
             this.comboBox5.TabIndex = 134;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
+            // sfButton8
+            // 
+            this.sfButton8.AccessibleName = "Button";
+            this.sfButton8.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton8.Location = new System.Drawing.Point(917, 525);
+            this.sfButton8.Name = "sfButton8";
+            this.sfButton8.Size = new System.Drawing.Size(96, 20);
+            this.sfButton8.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.TabIndex = 134;
+            this.sfButton8.Text = "Patient";
+            this.sfButton8.UseVisualStyleBackColor = false;
+            this.sfButton8.Click += new System.EventHandler(this.sfButton8_Click);
+            // 
             // AddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 780);
+            this.Controls.Add(this.sfButton8);
             this.Controls.Add(this.sfButton6);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.sfButton7);
@@ -846,5 +862,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private Syncfusion.WinForms.Controls.SfButton sfButton6;
         private System.Windows.Forms.ComboBox comboBox5;
+        private Syncfusion.WinForms.Controls.SfButton sfButton8;
     }
 }

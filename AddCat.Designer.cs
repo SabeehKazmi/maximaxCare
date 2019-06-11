@@ -33,6 +33,7 @@
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
+            this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +93,26 @@
             this.sfButton1.UseVisualStyleBackColor = false;
             this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
+            // sfButton3
+            // 
+            this.sfButton3.AccessibleName = "Button";
+            this.sfButton3.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton3.Location = new System.Drawing.Point(6, 230);
+            this.sfButton3.Name = "sfButton3";
+            this.sfButton3.Size = new System.Drawing.Size(88, 23);
+            this.sfButton3.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.TabIndex = 17;
+            this.sfButton3.Text = "Inventory";
+            this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
+            // 
             // AddCat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 257);
+            this.Controls.Add(this.sfButton3);
             this.Controls.Add(this.sfButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.sfButton2);
@@ -117,5 +133,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Syncfusion.WinForms.Controls.SfButton sfButton1;
+        private Syncfusion.WinForms.Controls.SfButton sfButton3;
     }
 }

@@ -44,5 +44,19 @@ namespace MaximaxCare
         {
 
         }
+
+        private void panelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Panel p = new Panel();
+            p.Show();
+            this.Close();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Authorization a = new Authorization();
+            a.Show();
+        }
     }
 }

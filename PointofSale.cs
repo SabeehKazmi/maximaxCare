@@ -36,18 +36,28 @@ namespace MaximaxCare
 
         private void sfButton8_Click(object sender, EventArgs e)
         {
-            if (txtPtRef.Text != "")
+            try
             {
-                //will select a specific patient medicine list 
-                //so that it could be minused from stock 
-                query = "select * from Per_Patient_Med where Pt_Ref_No = '" + txtPtRef.Text + "' and Date == '" + dateTimePicker1.Text + "'";
-                ds = rp.getdata(query);
-                dataGridView1.DataSource = ds.Tables["0"].DefaultView;
-                pt_ref_no = txtPtRef.Text;
+                if (txtPtRef.Text != "")
+                {
+                    //will select a specific patient medicine list 
+                    //so that it could be minused from stock 
+                    query = "select * from Per_Patient_Med where Pt_Ref_No = '" + txtPtRef.Text + "' and Date = '" + dateTimePicker1.Text + "'";
+                    ds = rp.getdata(query);
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                    pt_ref_no = txtPtRef.Text;
+                }
+                else
+                {
+                    dr = (MessageBox.Show("Enter the reference number of patient.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                }
             }
-            else
+            
+           
+            catch (Exception ex)
             {
-                dr = (MessageBox.Show("Enter the reference number of patient.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -78,7 +88,10 @@ namespace MaximaxCare
 
         private void txtDrugs_TextChanged(object sender, EventArgs e)
         {
-
+            query = "select S_P_P from Medicine where Med_Name = '" + txtDrugs.Text + "'";
+            ds = rp.getdata(query);
+            //dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+            //pt_ref_no = txtPtRef.Text;
         }
 
         private void txtNo_TextChanged(object sender, EventArgs e)
@@ -113,6 +126,13 @@ namespace MaximaxCare
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void sfButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Panel p = new Panel();
+            p.Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

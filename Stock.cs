@@ -89,5 +89,12 @@ namespace MaximaxCare
                 }
             }
         }
+
+        private void sfButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inventory i = new Inventory();
+            i.Show();
+        }
     }
 }
