@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MaximaxCare
 {
-    
+    // this only contain links and basic info can be described as a connection page
     public partial class Panel : MetroFramework.Forms.MetroForm
     {
         DialogResult dr = new DialogResult();
@@ -31,6 +31,7 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
+            // log you out from system
             dr = (MessageBox.Show("Really want out?","Log Out", MessageBoxButtons.YesNo,MessageBoxIcon.Warning));
             if (dr == DialogResult.Yes)
             {

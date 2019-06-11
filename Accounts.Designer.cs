@@ -34,7 +34,6 @@
             this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +53,6 @@
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -66,8 +64,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sfButton9 = new Syncfusion.WinForms.Controls.SfButton();
-            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton7 = new Syncfusion.WinForms.Controls.SfButton();
             this.tabPage2.SuspendLayout();
@@ -100,7 +96,6 @@
             this.groupBox1.Controls.Add(this.sfButton4);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.dateTimePicker4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dateTimePicker5);
@@ -138,6 +133,7 @@
             this.sfButton4.TabIndex = 32;
             this.sfButton4.Text = "Search";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // comboBox3
             // 
@@ -152,6 +148,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 23);
             this.comboBox3.TabIndex = 30;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -162,16 +159,6 @@
             this.label5.Size = new System.Drawing.Size(52, 15);
             this.label5.TabIndex = 29;
             this.label5.Text = "Property";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(131, 18);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(38, 19);
-            this.checkBox2.TabIndex = 21;
-            this.checkBox2.Text = "To";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker4
             // 
@@ -185,11 +172,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(165, 19);
+            this.label6.Location = new System.Drawing.Point(127, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 15);
+            this.label6.Size = new System.Drawing.Size(47, 15);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Date";
+            this.label6.Text = "Date To";
             // 
             // dateTimePicker5
             // 
@@ -218,6 +205,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1035, 371);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // tabPage1
             // 
@@ -247,6 +235,7 @@
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add Expense";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // sfButton1
             // 
@@ -260,6 +249,7 @@
             this.sfButton1.TabIndex = 11;
             this.sfButton1.Text = "Add";
             this.sfButton1.UseVisualStyleBackColor = false;
+            this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
             // label4
             // 
@@ -287,6 +277,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(121, 21);
             this.textBox9.TabIndex = 27;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label3
             // 
@@ -316,6 +307,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 21);
             this.dateTimePicker1.TabIndex = 24;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox2
             // 
@@ -323,7 +315,6 @@
             this.groupBox2.Controls.Add(this.sfButton2);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
@@ -335,6 +326,7 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Filter";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // sfButton3
             // 
@@ -361,22 +353,16 @@
             this.sfButton2.TabIndex = 12;
             this.sfButton2.Text = "Search";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Fuel",
-            "PTCL",
-            "Salaries",
-            "Electricity",
-            "Medicine Stock",
-            "All",
-            "Others"});
             this.comboBox2.Location = new System.Drawing.Point(275, 36);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 30;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -388,33 +374,23 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "Expense Head";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(131, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(38, 19);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.Text = "To";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.Location = new System.Drawing.Point(130, 37);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(140, 23);
             this.dateTimePicker3.TabIndex = 13;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(165, 19);
+            this.label13.Location = new System.Drawing.Point(127, 18);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 15);
+            this.label13.Size = new System.Drawing.Size(47, 15);
             this.label13.TabIndex = 12;
-            this.label13.Text = "Date";
+            this.label13.Text = "Date To";
             // 
             // dateTimePicker2
             // 
@@ -423,6 +399,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(120, 23);
             this.dateTimePicker2.TabIndex = 7;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label21
             // 
@@ -443,6 +420,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1029, 371);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabControl1
             // 
@@ -471,8 +449,6 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.dataGridView3);
             this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.sfButton9);
-            this.groupBox4.Controls.Add(this.sfButton6);
             this.groupBox4.Controls.Add(this.sfButton8);
             this.groupBox4.Controls.Add(this.sfButton7);
             this.groupBox4.Location = new System.Drawing.Point(238, 13);
@@ -485,7 +461,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 87);
+            this.label1.Location = new System.Drawing.Point(29, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
@@ -504,46 +480,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 103);
+            this.textBox1.Location = new System.Drawing.Point(32, 170);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // sfButton9
-            // 
-            this.sfButton9.AccessibleName = "Button";
-            this.sfButton9.BackColor = System.Drawing.Color.Gold;
-            this.sfButton9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton9.Location = new System.Drawing.Point(24, 213);
-            this.sfButton9.Name = "sfButton9";
-            this.sfButton9.Size = new System.Drawing.Size(96, 22);
-            this.sfButton9.Style.BackColor = System.Drawing.Color.Gold;
-            this.sfButton9.TabIndex = 5;
-            this.sfButton9.Text = "Update";
-            this.sfButton9.UseVisualStyleBackColor = false;
-            this.sfButton9.Click += new System.EventHandler(this.sfButton9_Click);
-            // 
-            // sfButton6
-            // 
-            this.sfButton6.AccessibleName = "Button";
-            this.sfButton6.BackColor = System.Drawing.Color.Gold;
-            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton6.Location = new System.Drawing.Point(24, 129);
-            this.sfButton6.Name = "sfButton6";
-            this.sfButton6.Size = new System.Drawing.Size(96, 22);
-            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
-            this.sfButton6.TabIndex = 2;
-            this.sfButton6.Text = "Search";
-            this.sfButton6.UseVisualStyleBackColor = false;
-            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click);
             // 
             // sfButton8
             // 
             this.sfButton8.AccessibleName = "Button";
             this.sfButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton8.Location = new System.Drawing.Point(24, 185);
+            this.sfButton8.Location = new System.Drawing.Point(32, 252);
             this.sfButton8.Name = "sfButton8";
             this.sfButton8.Size = new System.Drawing.Size(96, 22);
             this.sfButton8.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
@@ -557,7 +505,7 @@
             this.sfButton7.AccessibleName = "Button";
             this.sfButton7.BackColor = System.Drawing.Color.Gold;
             this.sfButton7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton7.Location = new System.Drawing.Point(24, 157);
+            this.sfButton7.Location = new System.Drawing.Point(32, 224);
             this.sfButton7.Name = "sfButton7";
             this.sfButton7.Size = new System.Drawing.Size(96, 22);
             this.sfButton7.Style.BackColor = System.Drawing.Color.Gold;
@@ -601,7 +549,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
@@ -621,7 +568,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -629,10 +575,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
-        private Syncfusion.WinForms.Controls.SfButton sfButton6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private Syncfusion.WinForms.Controls.SfButton sfButton9;
         private Syncfusion.WinForms.Controls.SfButton sfButton8;
         private Syncfusion.WinForms.Controls.SfButton sfButton7;
         private System.Windows.Forms.DataGridView dataGridView3;

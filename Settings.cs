@@ -12,6 +12,7 @@ namespace MaximaxCare
 {
     public partial class Settings : MetroFramework.Forms.MetroForm
     {
+        //basic declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         String query;
@@ -24,6 +25,7 @@ namespace MaximaxCare
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            //total emplyess data
             query = "select * from author";
             ds = rp.getdata(query);
             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
@@ -36,6 +38,7 @@ namespace MaximaxCare
 
         private void sfButton2_Click(object sender, EventArgs e)
         {
+            //validations
             if (textBox1.Text != "")
             {
                 if (textBox2.Text != "")
@@ -44,6 +47,7 @@ namespace MaximaxCare
                     {
                         if (textBox3.Text != "")
                         {
+                            //insert employe
                             query = "INSERT INTO author (User_Name, Password, Date, Role, E_Mail) VALUES ('"+ textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Text + "', '" + comboBox1.Text + "', '" + textBox3.Text + "')";
                             try
                             {
@@ -118,6 +122,7 @@ namespace MaximaxCare
             {
                 try
                 {
+                    //delete employee on the basis of email
                     query = "DELETE FROM author WHERE E_Mail = '" + textBox3.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
@@ -152,6 +157,7 @@ namespace MaximaxCare
             {
                 try
                 {
+                    //update employee
                     query = "UPDATE author SET User_Name = '" + textBox1.Text + "', Password = '" + textBox2.Text + "', Date = '" + dateTimePicker1.Text + "', Role = '" + comboBox1.Text + "', E_Mail = '" + textBox3.Text + "' WHERE E_Mail = '" + textBox3.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Updated Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
@@ -181,6 +187,7 @@ namespace MaximaxCare
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+            //searching a specific employee on the basis of username
             query = "select * from author where User_Name Like '" + textBox4.Text + "%'";
             ds = rp.getdata(query);
             r = ds.Tables["0"].Rows.Count;
@@ -190,6 +197,7 @@ namespace MaximaxCare
             }
             else
             {
+                //searching a specific employee on the basis of password
                 query = "select * from author where Password Like '" + textBox4.Text + "%'";
                 ds = rp.getdata(query);
                 r = ds.Tables["0"].Rows.Count;
@@ -199,6 +207,7 @@ namespace MaximaxCare
                 }
                 else
                 {
+                    //searching a specific employee on the basis of email
                     query = "select * from author where E_Mail Like '" + textBox4.Text + "%'";
                     ds = rp.getdata(query);
                     r = ds.Tables["0"].Rows.Count;
@@ -208,6 +217,7 @@ namespace MaximaxCare
                     }
                     else
                     {
+                        //searching a specific employee on the basis of role
                         query = "select * from author where Role Like '" + textBox4.Text + "%'";
                         ds = rp.getdata(query);
                         r = ds.Tables["0"].Rows.Count;
@@ -217,6 +227,7 @@ namespace MaximaxCare
                         }
                         else
                         {
+                            //searching a specific employee on the basis of date
                             query = "select * from author where Date Like '" + textBox4.Text + "%'";
                             ds = rp.getdata(query);
                             r = ds.Tables["0"].Rows.Count;

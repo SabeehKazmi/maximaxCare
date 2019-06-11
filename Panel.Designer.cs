@@ -42,7 +42,7 @@
             this.sfButton1.AccessibleName = "Button";
             this.sfButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
             this.sfButton1.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sfButton1.Location = new System.Drawing.Point(317, 441);
+            this.sfButton1.Location = new System.Drawing.Point(350, 378);
             this.sfButton1.Name = "sfButton1";
             this.sfButton1.Size = new System.Drawing.Size(157, 57);
             this.sfButton1.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
@@ -56,7 +56,7 @@
             this.sfButton3.AccessibleName = "Button";
             this.sfButton3.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton3.Location = new System.Drawing.Point(465, 93);
+            this.sfButton3.Location = new System.Drawing.Point(552, 93);
             this.sfButton3.Name = "sfButton3";
             this.sfButton3.Size = new System.Drawing.Size(286, 98);
             this.sfButton3.Style.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -70,7 +70,7 @@
             this.sfButton4.AccessibleName = "Button";
             this.sfButton4.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton4.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton4.Location = new System.Drawing.Point(279, 197);
+            this.sfButton4.Location = new System.Drawing.Point(313, 197);
             this.sfButton4.Name = "sfButton4";
             this.sfButton4.Size = new System.Drawing.Size(242, 144);
             this.sfButton4.Style.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -113,7 +113,7 @@
             this.sfButton7.AccessibleName = "Button";
             this.sfButton7.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton7.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton7.Location = new System.Drawing.Point(317, 347);
+            this.sfButton7.Location = new System.Drawing.Point(116, 197);
             this.sfButton7.Name = "sfButton7";
             this.sfButton7.Size = new System.Drawing.Size(157, 88);
             this.sfButton7.Style.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -127,7 +127,7 @@
             this.sfButton8.AccessibleName = "Button";
             this.sfButton8.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.Font = new System.Drawing.Font("Courier New", 14.25F);
-            this.sfButton8.Location = new System.Drawing.Point(480, 347);
+            this.sfButton8.Location = new System.Drawing.Point(552, 347);
             this.sfButton8.Name = "sfButton8";
             this.sfButton8.Size = new System.Drawing.Size(271, 88);
             this.sfButton8.Style.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 522);
+            this.ClientSize = new System.Drawing.Size(904, 489);
             this.Controls.Add(this.sfButton8);
             this.Controls.Add(this.sfButton7);
             this.Controls.Add(this.sfButton6);

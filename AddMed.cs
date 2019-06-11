@@ -12,11 +12,13 @@ namespace MaximaxCare
 {
     public partial class AddMed : MetroFramework.Forms.MetroForm
     {
+        //basic referances declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         String query, query1;
         int r;
         DialogResult dr = new DialogResult();
+        // these variables required because performing some mathematical operations
         float PiP, QPP, qty, pPrice, sPrice, ReorderP, ppp, spp, stock;
         int reorderQ;
         public AddMed()
@@ -26,6 +28,7 @@ namespace MaximaxCare
 
         private void AddMed_Load(object sender, EventArgs e)
         {
+            //gridview medicine date show and add items into combobox
             query = "select * from medicine";
             ds = rp.getdata(query);
             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
@@ -49,6 +52,7 @@ namespace MaximaxCare
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //searching medicine according to a specific name
             query = "select * from medicine where Med_Name Like '" + textBox1.Text + "%'";
             ds = rp.getdata(query);
             r = ds.Tables["0"].Rows.Count;
@@ -75,6 +79,7 @@ namespace MaximaxCare
 
         private void txtPinP_TextChanged(object sender, EventArgs e)
         {
+            //piece in packing
             if (txtPinP.Text != "")
             {
                 PiP = Convert.ToInt32(txtPinP.Text);
@@ -93,14 +98,17 @@ namespace MaximaxCare
 
         private void txtPiecePack_TextChanged(object sender, EventArgs e)
         {
+            // the mathematical code that will do all the caculation on the basiis of pip and price
             if (txtPiecePack.Text != "")
             {
+                //measure the total number of medicines available in quantity
                 QPP = Convert.ToInt32(txtPiecePack.Text);
                 qty = PiP * QPP;
                 qty = (float)(Math.Truncate((double)qty * 100.0) / 100.0);
                 txtQty.Text = qty.ToString();
                 if (txtPurchasePrice.Text != "")
                 {
+                    //purchase per piece calculation
                     pPrice = Convert.ToInt32(txtPurchasePrice.Text);
                     ppp = pPrice / qty;
                     ppp = (float)(Math.Truncate((double)ppp * 100.0) / 100.0);
@@ -108,6 +116,7 @@ namespace MaximaxCare
                 }
                 if (txtSalePrice.Text != "")
                 {
+                    //sale per piece calculation
                     sPrice = Convert.ToInt32(txtSalePrice.Text);
                     spp = sPrice / qty;
                     spp = (float)(Math.Truncate((double)spp * 100.0) / 100.0);
@@ -115,12 +124,15 @@ namespace MaximaxCare
                 }
                 if (txtReorderQty.Text != "")
                 {
+                    //if the stock got reordered and arrived so thats the way we enter it. 
+                    //initially it will remain 0 then next tie for a specific product the stock arrived will be added into this
                     ReorderP = Convert.ToInt32(txtReorderQty.Text);
                     stock = qty + ReorderP;
                     txtStock.Text = stock.ToString();
                 }
                 else
                 {
+                    //total quantity available
                     stock = qty;
                     txtStock.Text = stock.ToString();
                 }
@@ -145,6 +157,7 @@ namespace MaximaxCare
             {
                 try
                 {
+                    //update the medicine in table if something wrong entered or new stock reordered entered
                     query = "UPDATE medicine SET Med_Name = '" + txtMed.Text + "', Cat = '" + cmbCategory.Text + "', Weight = '" + txtWeight.Text + "' WHERE Med_Name = '" + textBox1.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Updated Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
@@ -168,11 +181,13 @@ namespace MaximaxCare
         {
             if (textBox1.Text != "")
             {
+                //search the stock from medicine table according to a specific medicine by its name Med_Name
                 query = "SELECT Stock FROM medicine WHERE Med_Name = '" + textBox1.Text + "'";
                 ds = rp.getdata(query);
                 r = ds.Tables["0"].Rows.Count;
                 if (r > 0)
                 {
+                    //updation of a specific medicine over name code
                     string Stringstock = ds.Tables["0"].Rows[0][0].ToString();
                     stock = Convert.ToInt32(Stringstock);
                     stock = reorderQ + stock;
@@ -193,6 +208,7 @@ namespace MaximaxCare
                 }
                 else
                 {
+                    //reenter the medicine name again
                     dr = (MessageBox.Show("No Medicine Exist of this name.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Error));
                     textBox1.Clear();
                     textBox1.Focus();
@@ -210,6 +226,7 @@ namespace MaximaxCare
             {
                 try
                 {
+                    //medicine deletion
                     query = "DELETE FROM medicine WHERE Med_Name = '" + textBox1.Text + "'";
                     rp.savdelup(query);
                     dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
@@ -271,6 +288,7 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
+            //validations
             if (txtMed.Text != "")
             {
                 if (txtPinP.Text != "")
@@ -291,6 +309,7 @@ namespace MaximaxCare
                                             {
                                                 if (txtSPP.Text != "")
                                                 {
+                                                    //insertion of a new medicine
                                                     query = "INSERT INTO medicine (Med_Name, Piece_in_Pack, Qty_Per_Pack, Qty, Cat, Purchase_Price, Sale_Price, Weight, Reorder_Qty, Stock, P_P_Piece, S_P_Piece, Exp_Date, Date)" +
                                                         " VALUES ('" + txtMed.Text + 
                                                         "', '" + txtPinP.Text + 
@@ -307,6 +326,8 @@ namespace MaximaxCare
                                                         "', '" + dateTimePicker2.Text + 
                                                         "', '" + dateTimePicker1.Text + "')";
                                                     string med = "Medicine";
+                                                    //and also when it will be bought from us it will also be cost to us
+                                                    //so its also got added into expense table
                                                     query1 = "INSERT INTO Expense (Date, Expense_Head, Expense_Amount, Med_Name, Qty) " +
                                                         "VALUES ('" + dateTimePicker1.Text +
                                                         "', '" + med +

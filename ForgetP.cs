@@ -14,6 +14,7 @@ namespace MaximaxCare
 {
     public partial class ForgetP : MetroFramework.Forms.MetroForm
     {
+        //basic declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         DataSet ds1 = new DataSet();
@@ -37,6 +38,7 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
+            //get the name and password of user according to its email
             query = "SELECT User_Name FROM Author WHERE E_Mail = '" + textBoxExt1.Text + "'";
             query1 = "SELECT Password FROM Author WHERE E_Mail = '" + textBoxExt1.Text + "'";
             ds = rp.getdata(query);
@@ -49,6 +51,7 @@ namespace MaximaxCare
                 string password = ds1.Tables["0"].Rows[0][0].ToString();
                 try
                 {
+                    //and send it to mail address of that person with the help of SMTP server
                     MailMessage mail = new MailMessage();
                     SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
@@ -56,7 +59,7 @@ namespace MaximaxCare
                     mail.To.Add(textBoxExt1.Text);
                     mail.Subject = "User Name and Passowrd Reminder";
                     mail.Body = "User Name: "+ name +" | Password: "+ password;
-
+                    //define port and the username and password of the organization
                     SmtpServer.Port = 587;
                     SmtpServer.Credentials = new System.Net.NetworkCredential("MaximaxCare", "MadMax47");
                     SmtpServer.EnableSsl = true;

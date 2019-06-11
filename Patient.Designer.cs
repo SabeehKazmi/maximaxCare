@@ -59,6 +59,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel3
             // 
@@ -130,6 +131,7 @@
             this.sfButton4.TabIndex = 17;
             this.sfButton4.Text = "Backup";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // sfButton1
             // 
@@ -152,6 +154,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(148, 20);
             this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // sfButton3
             // 
@@ -165,6 +168,7 @@
             this.sfButton3.TabIndex = 13;
             this.sfButton3.Text = "Refresh";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton2
             // 
@@ -178,6 +182,7 @@
             this.sfButton2.TabIndex = 14;
             this.sfButton2.Text = "Show All Patients";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // dataGridView1
             // 
@@ -191,6 +196,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(957, 546);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Patient
             // 

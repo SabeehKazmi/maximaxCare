@@ -12,6 +12,7 @@ namespace MaximaxCare
 {
     public partial class Stock : MetroFramework.Forms.MetroForm
     {
+        //basic declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         String query;
@@ -24,6 +25,7 @@ namespace MaximaxCare
 
         private void Stock_Load(object sender, EventArgs e)
         {
+            //show n gridview
             query = "select Med_Name, Cat, Stock, Exp_Date from medicine";
             ds = rp.getdata(query);
             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
@@ -41,6 +43,7 @@ namespace MaximaxCare
 
         private void txtMedi_TextChanged(object sender, EventArgs e)
         {
+            //search medicine on the basis of its name
             query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Med_Name Like '" + txtMedi.Text + "%'";
             ds = rp.getdata(query);
             r = ds.Tables["0"].Rows.Count;
@@ -50,6 +53,7 @@ namespace MaximaxCare
             }
             else
             {
+                //search medicine on the basis of its cat
                 query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Cat Like '" + txtMedi.Text + "%'";
                 ds = rp.getdata(query);
                 r = ds.Tables["0"].Rows.Count;
@@ -59,6 +63,7 @@ namespace MaximaxCare
                 }
                 else
                 {
+                    //search medicine on the basis of its stock
                     query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Stock Like '" + txtMedi.Text + "%'";
                     ds = rp.getdata(query);
                     r = ds.Tables["0"].Rows.Count;
@@ -68,6 +73,7 @@ namespace MaximaxCare
                     }
                     else
                     {
+                        //search medicine on the basis of its expire date
                         query = "select Med_Name, Cat, Stock, Exp_Date from medicine where Exp_Date Like '" + txtMedi.Text + "%'";
                         ds = rp.getdata(query);
                         r = ds.Tables["0"].Rows.Count;

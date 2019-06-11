@@ -97,6 +97,7 @@
             this.sfButton2.TabIndex = 96;
             this.sfButton2.Text = "Print";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // sfButton3
             // 
@@ -118,6 +119,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(116, 20);
             this.textBox4.TabIndex = 80;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox6
             // 
@@ -128,6 +130,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(30, 20);
             this.textBox6.TabIndex = 84;
+            this.textBox6.Text = "%";
             // 
             // label4
             // 
@@ -146,14 +149,15 @@
             this.textBox2.Size = new System.Drawing.Size(116, 20);
             this.textBox2.TabIndex = 76;
             this.textBox2.Text = "0";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox5
             // 
-            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(262, 79);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(86, 20);
             this.textBox5.TabIndex = 82;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
@@ -175,7 +179,6 @@
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(9, 38);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 20);
@@ -197,6 +200,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(201, 20);
             this.dateTimePicker1.TabIndex = 92;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox1
             // 
@@ -230,14 +234,16 @@
             this.sfButton1.TabIndex = 96;
             this.sfButton1.Text = "Add";
             this.sfButton1.UseVisualStyleBackColor = false;
+            this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(462, 48);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(62, 20);
             this.textBox1.TabIndex = 72;
+            this.textBox1.Text = "300";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -250,29 +256,25 @@
             // 
             // txtDrugs
             // 
-            this.txtDrugs.Enabled = false;
             this.txtDrugs.Location = new System.Drawing.Point(63, 48);
             this.txtDrugs.Name = "txtDrugs";
             this.txtDrugs.Size = new System.Drawing.Size(201, 20);
             this.txtDrugs.TabIndex = 65;
+            this.txtDrugs.TextChanged += new System.EventHandler(this.txtDrugs_TextChanged);
             // 
             // comboBox2
             // 
-            this.comboBox2.Enabled = false;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "SOS",
-            "PC",
-            "AC",
-            "AD",
-            "PO",
-            "IM",
-            "HS",
-            "Stat"});
+            "1",
+            "1+1",
+            "1+1+1"});
             this.comboBox2.Location = new System.Drawing.Point(336, 48);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 69;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -294,19 +296,21 @@
             // 
             // txtSr
             // 
-            this.txtSr.Enabled = false;
             this.txtSr.Location = new System.Drawing.Point(24, 48);
             this.txtSr.Name = "txtSr";
+            this.txtSr.ReadOnly = true;
             this.txtSr.Size = new System.Drawing.Size(36, 20);
             this.txtSr.TabIndex = 63;
+            this.txtSr.Text = "1";
+            this.txtSr.TextChanged += new System.EventHandler(this.txtSr_TextChanged);
             // 
             // txtNo
             // 
-            this.txtNo.Enabled = false;
             this.txtNo.Location = new System.Drawing.Point(268, 48);
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(62, 20);
             this.txtNo.TabIndex = 67;
+            this.txtNo.TextChanged += new System.EventHandler(this.txtNo_TextChanged);
             // 
             // label23
             // 
@@ -335,6 +339,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(386, 276);
             this.dataGridView2.TabIndex = 89;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // dataGridView1
             // 
@@ -345,6 +350,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(391, 276);
             this.dataGridView1.TabIndex = 88;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtPtRef
             // 
@@ -352,6 +358,7 @@
             this.txtPtRef.Name = "txtPtRef";
             this.txtPtRef.Size = new System.Drawing.Size(92, 20);
             this.txtPtRef.TabIndex = 87;
+            this.txtPtRef.TextChanged += new System.EventHandler(this.txtPtRef_TextChanged);
             // 
             // label2
             // 
@@ -383,6 +390,7 @@
             this.sfButton8.TabIndex = 95;
             this.sfButton8.Text = "Search";
             this.sfButton8.UseVisualStyleBackColor = false;
+            this.sfButton8.Click += new System.EventHandler(this.sfButton8_Click);
             // 
             // PointofSale
             // 

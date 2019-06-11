@@ -35,8 +35,6 @@
             this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtAdsalary = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDep = new System.Windows.Forms.TextBox();
@@ -64,7 +62,6 @@
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -72,6 +69,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.checkBoxAdv1 = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,6 +77,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBoxAdv1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -88,7 +87,7 @@
             this.tabControl1.Location = new System.Drawing.Point(53, 80);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1235, 545);
+            this.tabControl1.Size = new System.Drawing.Size(1019, 545);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -98,7 +97,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1227, 519);
+            this.tabPage1.Size = new System.Drawing.Size(1011, 519);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Employee";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -110,16 +109,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 158);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1221, 393);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 355);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.sfButton4);
             this.groupBox1.Controls.Add(this.sfButton3);
             this.groupBox1.Controls.Add(this.sfButton2);
-            this.groupBox1.Controls.Add(this.txtFullName);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtAdsalary);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtDep);
@@ -141,10 +139,11 @@
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1158, 136);
+            this.groupBox1.Size = new System.Drawing.Size(990, 136);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee_Information";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // sfButton4
             // 
@@ -158,6 +157,7 @@
             this.sfButton4.TabIndex = 26;
             this.sfButton4.Text = "Save";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // sfButton3
             // 
@@ -171,6 +171,7 @@
             this.sfButton3.TabIndex = 23;
             this.sfButton3.Text = "Delete";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton2
             // 
@@ -184,22 +185,7 @@
             this.sfButton2.TabIndex = 24;
             this.sfButton2.Text = "Update";
             this.sfButton2.UseVisualStyleBackColor = false;
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(301, 46);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(151, 23);
-            this.txtFullName.TabIndex = 3;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(299, 29);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 15);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Full_Name";
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // txtAdsalary
             // 
@@ -207,6 +193,7 @@
             this.txtAdsalary.Name = "txtAdsalary";
             this.txtAdsalary.Size = new System.Drawing.Size(140, 23);
             this.txtAdsalary.TabIndex = 9;
+            this.txtAdsalary.TextChanged += new System.EventHandler(this.txtAdsalary_TextChanged);
             // 
             // label10
             // 
@@ -223,6 +210,7 @@
             this.txtDep.Name = "txtDep";
             this.txtDep.Size = new System.Drawing.Size(140, 23);
             this.txtDep.TabIndex = 8;
+            this.txtDep.TextChanged += new System.EventHandler(this.txtDep_TextChanged);
             // 
             // label11
             // 
@@ -235,16 +223,17 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(896, 45);
+            this.txtAddress.Location = new System.Drawing.Point(741, 45);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(248, 71);
+            this.txtAddress.Size = new System.Drawing.Size(227, 24);
             this.txtAddress.TabIndex = 7;
             this.txtAddress.Text = "";
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(893, 28);
+            this.label9.Location = new System.Drawing.Point(738, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 15);
             this.label9.TabIndex = 12;
@@ -257,6 +246,7 @@
             this.dtpDOJ.Name = "dtpDOJ";
             this.dtpDOJ.Size = new System.Drawing.Size(144, 23);
             this.dtpDOJ.TabIndex = 10;
+            this.dtpDOJ.ValueChanged += new System.EventHandler(this.dtpDOJ_ValueChanged);
             // 
             // label8
             // 
@@ -269,15 +259,16 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(739, 46);
+            this.txtContact.Location = new System.Drawing.Point(584, 45);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(152, 23);
             this.txtContact.TabIndex = 6;
+            this.txtContact.TextChanged += new System.EventHandler(this.txtContact_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(737, 28);
+            this.label7.Location = new System.Drawing.Point(582, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 15);
             this.label7.TabIndex = 8;
@@ -285,16 +276,17 @@
             // 
             // maskCNIC
             // 
-            this.maskCNIC.Location = new System.Drawing.Point(601, 46);
+            this.maskCNIC.Location = new System.Drawing.Point(446, 45);
             this.maskCNIC.Mask = "00000-0000000-0";
             this.maskCNIC.Name = "maskCNIC";
             this.maskCNIC.Size = new System.Drawing.Size(136, 23);
             this.maskCNIC.TabIndex = 5;
+            this.maskCNIC.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskCNIC_MaskInputRejected);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(600, 28);
+            this.label6.Location = new System.Drawing.Point(445, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 6;
@@ -303,15 +295,16 @@
             // dtpDOB
             // 
             this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDOB.Location = new System.Drawing.Point(454, 46);
+            this.dtpDOB.Location = new System.Drawing.Point(299, 45);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(144, 23);
             this.dtpDOB.TabIndex = 4;
+            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(455, 30);
+            this.label5.Location = new System.Drawing.Point(300, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 15);
             this.label5.TabIndex = 4;
@@ -323,6 +316,7 @@
             this.txtLN.Name = "txtLN";
             this.txtLN.Size = new System.Drawing.Size(136, 23);
             this.txtLN.TabIndex = 2;
+            this.txtLN.TextChanged += new System.EventHandler(this.txtLN_TextChanged);
             // 
             // txtFName
             // 
@@ -330,6 +324,7 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(140, 23);
             this.txtFName.TabIndex = 1;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             // 
             // label4
             // 
@@ -357,7 +352,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1227, 519);
+            this.tabPage2.Size = new System.Drawing.Size(1011, 519);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Salary_Management";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -370,29 +365,31 @@
             "Paid",
             "Unpaid",
             "All"});
-            this.comboBox1.Location = new System.Drawing.Point(170, 276);
+            this.comboBox1.Location = new System.Drawing.Point(61, 276);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(170, 316);
+            this.dataGridView2.Location = new System.Drawing.Point(61, 316);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(877, 197);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBoxAdv1);
             this.groupBox2.Controls.Add(this.sfButton7);
             this.groupBox2.Controls.Add(this.sfButton1);
             this.groupBox2.Controls.Add(this.sfButton5);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.dateTimePicker3);
@@ -401,7 +398,7 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(323, 6);
+            this.groupBox2.Location = new System.Drawing.Point(214, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(595, 304);
             this.groupBox2.TabIndex = 0;
@@ -420,6 +417,7 @@
             this.sfButton7.TabIndex = 21;
             this.sfButton7.Text = "Done";
             this.sfButton7.UseVisualStyleBackColor = false;
+            this.sfButton7.Click += new System.EventHandler(this.sfButton7_Click);
             // 
             // sfButton1
             // 
@@ -446,6 +444,7 @@
             this.sfButton5.TabIndex = 19;
             this.sfButton5.Text = "Search";
             this.sfButton5.UseVisualStyleBackColor = false;
+            this.sfButton5.Click += new System.EventHandler(this.sfButton5_Click);
             // 
             // textBox1
             // 
@@ -453,6 +452,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(213, 23);
             this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label25
             // 
@@ -462,17 +462,6 @@
             this.label25.Size = new System.Drawing.Size(49, 15);
             this.label25.TabIndex = 15;
             this.label25.Text = "Contact";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(268, 220);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(50, 19);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Paid";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -490,6 +479,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(213, 23);
             this.textBox8.TabIndex = 5;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // dateTimePicker3
             // 
@@ -498,6 +488,7 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(213, 23);
             this.dateTimePicker3.TabIndex = 4;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // textBox7
             // 
@@ -506,6 +497,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(213, 23);
             this.textBox7.TabIndex = 3;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label15
             // 
@@ -534,11 +526,23 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Name";
             // 
+            // checkBoxAdv1
+            // 
+            this.checkBoxAdv1.BeforeTouchSize = new System.Drawing.Size(122, 25);
+            this.checkBoxAdv1.Location = new System.Drawing.Point(226, 223);
+            this.checkBoxAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(91)))));
+            this.checkBoxAdv1.Name = "checkBoxAdv1";
+            this.checkBoxAdv1.Size = new System.Drawing.Size(122, 25);
+            this.checkBoxAdv1.TabIndex = 22;
+            this.checkBoxAdv1.Text = "Paid";
+            this.checkBoxAdv1.ThemesEnabled = false;
+            this.checkBoxAdv1.CheckStateChanged += new System.EventHandler(this.checkBoxAdv1_CheckStateChanged);
+            // 
             // HRMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 675);
+            this.ClientSize = new System.Drawing.Size(1125, 661);
             this.Controls.Add(this.tabControl1);
             this.Name = "HRMS";
             this.Text = "HRMS";
@@ -552,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBoxAdv1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -562,8 +567,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtAdsalary;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDep;
@@ -586,7 +589,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -602,5 +604,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton5;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private Syncfusion.Windows.Forms.Tools.CheckBoxAdv checkBoxAdv1;
     }
 }

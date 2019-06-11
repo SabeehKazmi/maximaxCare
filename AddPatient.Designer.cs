@@ -37,7 +37,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.txtTempt = new System.Windows.Forms.TextBox();
@@ -45,20 +44,19 @@
             this.txtBP = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNo = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txtDrugs = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtSr = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.txtFee = new System.Windows.Forms.TextBox();
-            this.txtPType = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtGender = new System.Windows.Forms.TextBox();
@@ -85,12 +83,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPtRef = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
-            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton7 = new Syncfusion.WinForms.Controls.SfButton();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -120,6 +120,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
             this.dateTimePicker1.TabIndex = 42;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label26
             // 
@@ -136,6 +137,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(134, 20);
             this.textBox3.TabIndex = 29;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label25
             // 
@@ -158,6 +160,7 @@
             this.sfButton2.TabIndex = 77;
             this.sfButton2.Text = "Search";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // dataGridView1
             // 
@@ -165,20 +168,21 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 659);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 629);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 137);
             this.dataGridView1.TabIndex = 65;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Location = new System.Drawing.Point(864, 206);
+            this.groupBox2.Location = new System.Drawing.Point(886, 206);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 203);
+            this.groupBox2.Size = new System.Drawing.Size(166, 203);
             this.groupBox2.TabIndex = 122;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Test Section";
@@ -192,21 +196,15 @@
             this.label30.TabIndex = 59;
             this.label30.Text = "Prescribed Tests";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 91);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(227, 96);
-            this.richTextBox1.TabIndex = 29;
-            this.richTextBox1.Text = "";
-            // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(16, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label29
             // 
@@ -251,6 +249,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox5);
             this.groupBox1.Controls.Add(this.sfButton1);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.dataGridView2);
@@ -258,7 +257,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNo);
             this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.txtDrugs);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.txtSr);
             this.groupBox1.Controls.Add(this.label22);
@@ -269,26 +267,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Medicine";
             // 
+            // sfButton1
+            // 
+            this.sfButton1.AccessibleName = "Button";
+            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton1.Location = new System.Drawing.Point(456, 36);
+            this.sfButton1.Name = "sfButton1";
+            this.sfButton1.Size = new System.Drawing.Size(75, 20);
+            this.sfButton1.TabIndex = 127;
+            this.sfButton1.Text = "Add";
+            this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
+            // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "1+1",
+            "1+1+1"});
             this.comboBox2.Location = new System.Drawing.Point(329, 36);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 26;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(216, 65);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(327, 238);
             this.dataGridView2.TabIndex = 60;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // dataGridView3
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(18, 65);
             this.dataGridView3.Name = "dataGridView3";
@@ -310,6 +330,7 @@
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(62, 20);
             this.txtNo.TabIndex = 25;
+            this.txtNo.TextChanged += new System.EventHandler(this.txtNo_TextChanged);
             // 
             // label24
             // 
@@ -319,13 +340,6 @@
             this.label24.Size = new System.Drawing.Size(21, 13);
             this.label24.TabIndex = 4;
             this.label24.Text = "No";
-            // 
-            // txtDrugs
-            // 
-            this.txtDrugs.Location = new System.Drawing.Point(57, 36);
-            this.txtDrugs.Name = "txtDrugs";
-            this.txtDrugs.Size = new System.Drawing.Size(201, 20);
-            this.txtDrugs.TabIndex = 23;
             // 
             // label23
             // 
@@ -343,6 +357,7 @@
             this.txtSr.Name = "txtSr";
             this.txtSr.Size = new System.Drawing.Size(36, 20);
             this.txtSr.TabIndex = 98;
+            this.txtSr.TextChanged += new System.EventHandler(this.txtSr_TextChanged);
             // 
             // label22
             // 
@@ -369,20 +384,16 @@
             this.richTextBox2.Size = new System.Drawing.Size(255, 85);
             this.richTextBox2.TabIndex = 107;
             this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // txtFee
             // 
             this.txtFee.Location = new System.Drawing.Point(320, 62);
             this.txtFee.Name = "txtFee";
+            this.txtFee.ReadOnly = true;
             this.txtFee.Size = new System.Drawing.Size(180, 20);
             this.txtFee.TabIndex = 76;
-            // 
-            // txtPType
-            // 
-            this.txtPType.Location = new System.Drawing.Point(104, 63);
-            this.txtPType.Name = "txtPType";
-            this.txtPType.Size = new System.Drawing.Size(180, 20);
-            this.txtPType.TabIndex = 74;
+            this.txtFee.TextChanged += new System.EventHandler(this.txtFee_TextChanged);
             // 
             // label20
             // 
@@ -418,15 +429,16 @@
             // 
             // txtMed
             // 
-            this.txtMed.Location = new System.Drawing.Point(385, 277);
+            this.txtMed.Location = new System.Drawing.Point(385, 260);
             this.txtMed.Name = "txtMed";
             this.txtMed.Size = new System.Drawing.Size(105, 20);
             this.txtMed.TabIndex = 106;
+            this.txtMed.TextChanged += new System.EventHandler(this.txtMed_TextChanged);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(384, 260);
+            this.label19.Location = new System.Drawing.Point(382, 244);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(85, 13);
             this.label19.TabIndex = 114;
@@ -460,7 +472,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(384, 189);
+            this.label15.Location = new System.Drawing.Point(537, 191);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 13);
             this.label15.TabIndex = 109;
@@ -473,6 +485,7 @@
             this.rtbPC.Size = new System.Drawing.Size(513, 34);
             this.rtbPC.TabIndex = 100;
             this.rtbPC.Text = "";
+            this.rtbPC.TextChanged += new System.EventHandler(this.rtbPC_TextChanged);
             // 
             // label14
             // 
@@ -490,6 +503,7 @@
             this.rtbAllergies.Size = new System.Drawing.Size(639, 24);
             this.rtbAllergies.TabIndex = 98;
             this.rtbAllergies.Text = "";
+            this.rtbAllergies.TextChanged += new System.EventHandler(this.rtbAllergies_TextChanged);
             // 
             // label13
             // 
@@ -507,6 +521,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(134, 20);
             this.dtpDate.TabIndex = 95;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // label11
             // 
@@ -540,6 +555,7 @@
             this.txtMaskCon.Name = "txtMaskCon";
             this.txtMaskCon.Size = new System.Drawing.Size(128, 20);
             this.txtMaskCon.TabIndex = 90;
+            this.txtMaskCon.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtMaskCon_MaskInputRejected);
             // 
             // label8
             // 
@@ -574,6 +590,7 @@
             this.txtPtName.Name = "txtPtName";
             this.txtPtName.Size = new System.Drawing.Size(134, 20);
             this.txtPtName.TabIndex = 83;
+            this.txtPtName.TextChanged += new System.EventHandler(this.txtPtName_TextChanged);
             // 
             // label3
             // 
@@ -590,6 +607,7 @@
             this.txtPtRef.Name = "txtPtRef";
             this.txtPtRef.Size = new System.Drawing.Size(92, 20);
             this.txtPtRef.TabIndex = 82;
+            this.txtPtRef.TextChanged += new System.EventHandler(this.txtPtRef_TextChanged);
             // 
             // label31
             // 
@@ -599,16 +617,6 @@
             this.label31.Size = new System.Drawing.Size(54, 13);
             this.label31.TabIndex = 73;
             this.label31.Text = "Pt.Ref.No";
-            // 
-            // sfButton1
-            // 
-            this.sfButton1.AccessibleName = "Button";
-            this.sfButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton1.Location = new System.Drawing.Point(456, 36);
-            this.sfButton1.Name = "sfButton1";
-            this.sfButton1.Size = new System.Drawing.Size(75, 20);
-            this.sfButton1.TabIndex = 127;
-            this.sfButton1.Text = "Add";
             // 
             // sfButton3
             // 
@@ -622,6 +630,7 @@
             this.sfButton3.TabIndex = 127;
             this.sfButton3.Text = "Update";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton4
             // 
@@ -635,6 +644,7 @@
             this.sfButton4.TabIndex = 128;
             this.sfButton4.Text = "Delete";
             this.sfButton4.UseVisualStyleBackColor = false;
+            this.sfButton4.Click += new System.EventHandler(this.sfButton4_Click);
             // 
             // sfButton5
             // 
@@ -648,19 +658,7 @@
             this.sfButton5.TabIndex = 129;
             this.sfButton5.Text = "Detail Added";
             this.sfButton5.UseVisualStyleBackColor = false;
-            // 
-            // sfButton6
-            // 
-            this.sfButton6.AccessibleName = "Button";
-            this.sfButton6.BackColor = System.Drawing.Color.Gold;
-            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.sfButton6.Location = new System.Drawing.Point(917, 474);
-            this.sfButton6.Name = "sfButton6";
-            this.sfButton6.Size = new System.Drawing.Size(96, 20);
-            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
-            this.sfButton6.TabIndex = 130;
-            this.sfButton6.Text = "Refresh";
-            this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton5.Click += new System.EventHandler(this.sfButton5_Click);
             // 
             // sfButton7
             // 
@@ -675,13 +673,58 @@
             this.sfButton7.Text = "Print";
             this.sfButton7.UseVisualStyleBackColor = false;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(100, 64);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 132;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(16, 91);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(133, 85);
+            this.comboBox4.TabIndex = 133;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // sfButton6
+            // 
+            this.sfButton6.AccessibleName = "Button";
+            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.sfButton6.Location = new System.Drawing.Point(917, 473);
+            this.sfButton6.Name = "sfButton6";
+            this.sfButton6.Size = new System.Drawing.Size(96, 20);
+            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.TabIndex = 133;
+            this.sfButton6.Text = "Refresh";
+            this.sfButton6.UseVisualStyleBackColor = false;
+            this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click_1);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(59, 35);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(199, 21);
+            this.comboBox5.TabIndex = 134;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
             // AddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 920);
-            this.Controls.Add(this.sfButton7);
+            this.ClientSize = new System.Drawing.Size(1126, 780);
             this.Controls.Add(this.sfButton6);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.sfButton7);
             this.Controls.Add(this.sfButton5);
             this.Controls.Add(this.sfButton4);
             this.Controls.Add(this.sfButton3);
@@ -695,7 +738,6 @@
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtFee);
-            this.Controls.Add(this.txtPType);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtGender);
@@ -750,7 +792,6 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtTempt;
@@ -764,14 +805,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNo;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtDrugs;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtSr;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TextBox txtFee;
-        private System.Windows.Forms.TextBox txtPType;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtGender;
@@ -802,7 +841,10 @@
         private Syncfusion.WinForms.Controls.SfButton sfButton3;
         private Syncfusion.WinForms.Controls.SfButton sfButton4;
         private Syncfusion.WinForms.Controls.SfButton sfButton5;
-        private Syncfusion.WinForms.Controls.SfButton sfButton6;
         private Syncfusion.WinForms.Controls.SfButton sfButton7;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private Syncfusion.WinForms.Controls.SfButton sfButton6;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }

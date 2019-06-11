@@ -12,6 +12,7 @@ namespace MaximaxCare
 {
     public partial class Authorization : MetroFramework.Forms.MetroForm
     {
+        //basic declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         String query;
@@ -35,6 +36,7 @@ namespace MaximaxCare
             {
                 if (textBoxExt1.Text != string.Empty)
                 {
+                    //authenticate the provided information by data into table
                     query = "SELECT * FROM Author WHERE User_Name = '"+ textBoxExt1.Text +"' and Password = '"+ textBoxExt2.Text +"' and Role = '"+ comboBox1.SelectedItem.ToString() +"'";
                     ds = rp.getdata(query);
                     r = ds.Tables["0"].Rows.Count;
@@ -86,6 +88,7 @@ namespace MaximaxCare
 
         private void sfButton3_Click(object sender, EventArgs e)
         {
+            //forget passowrd code
             dr = (MessageBox.Show("Are you sure?", "Confermation", MessageBoxButtons.YesNo,MessageBoxIcon.Information));
             if (dr == DialogResult.Yes)
             {

@@ -12,6 +12,7 @@ namespace MaximaxCare
 {
     public partial class AddCat : MetroFramework.Forms.MetroForm
     {
+        // basic referances
         Repo rp = new Repo();
         DataSet ds = new DataSet();
         String query;
@@ -24,6 +25,7 @@ namespace MaximaxCare
 
         private void AddCat_Load(object sender, EventArgs e)
         {
+            // show in gridview
             query = "select * from Catagory";
             ds = rp.getdata(query);
             dataGridView1.DataSource = ds.Tables["0"].DefaultView;
@@ -36,14 +38,18 @@ namespace MaximaxCare
 
         private void sfButton2_Click(object sender, EventArgs e)
         {
+            //insertion into catagory table
             if (textBox1.Text != "")
             {
+              
                 query = "INSERT INTO Catagory (Cat) VALUES ('" + textBox1.Text + "')";
                 try
                 {
                     rp.savdelup(query);
+                    // data saved completion message
                     dr = (MessageBox.Show("Data Saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information));
                     textBox1.Clear();
+                    // show the updated table
                     query = "select * from Catagory";
                     ds = rp.getdata(query);
                     dataGridView1.DataSource = ds.Tables["0"].DefaultView;
@@ -66,6 +72,7 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
+            // code to delete a catagory
             if (textBox1.Text != "")
             {
                 try

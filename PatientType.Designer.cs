@@ -43,12 +43,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -93,6 +91,7 @@
             this.sfButton8.TabIndex = 15;
             this.sfButton8.Text = "Save";
             this.sfButton8.UseVisualStyleBackColor = false;
+            this.sfButton8.Click += new System.EventHandler(this.sfButton8_Click);
             // 
             // textBox5
             // 
@@ -100,6 +99,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(163, 20);
             this.textBox5.TabIndex = 2;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label7
             // 
@@ -116,6 +116,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -140,6 +141,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Fee";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // sfButton3
             // 
@@ -153,6 +155,7 @@
             this.sfButton3.TabIndex = 17;
             this.sfButton3.Text = "Save";
             this.sfButton3.UseVisualStyleBackColor = false;
+            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
             // 
             // sfButton2
             // 
@@ -166,6 +169,7 @@
             this.sfButton2.TabIndex = 16;
             this.sfButton2.Text = "Delete";
             this.sfButton2.UseVisualStyleBackColor = false;
+            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
             // 
             // sfButton1
             // 
@@ -179,6 +183,7 @@
             this.sfButton1.TabIndex = 15;
             this.sfButton1.Text = "Update";
             this.sfButton1.UseVisualStyleBackColor = false;
+            this.sfButton1.Click += new System.EventHandler(this.sfButton1_Click);
             // 
             // dataGridView1
             // 
@@ -189,15 +194,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(708, 228);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,51 +214,20 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(325, 48);
+            this.textBox4.Location = new System.Drawing.Point(306, 48);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(103, 23);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(324, 29);
+            this.label6.Location = new System.Drawing.Point(303, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 15);
             this.label6.TabIndex = 6;
             this.label6.Text = "FEE";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(218, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(103, 23);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(215, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Maximum_Salary";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(112, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(103, 23);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(109, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Minimum_Salary";
             // 
             // comboBox1
             // 
@@ -263,6 +236,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(85, 23);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -272,6 +246,23 @@
             this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Patient_Type";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(122, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(163, 23);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(119, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Patient_Type_Des";
             // 
             // PatientType
             // 
@@ -306,15 +297,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private Syncfusion.WinForms.Controls.SfButton sfButton8;
         private Syncfusion.WinForms.Controls.SfButton sfButton3;
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private Syncfusion.WinForms.Controls.SfButton sfButton1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
