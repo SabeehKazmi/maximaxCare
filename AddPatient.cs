@@ -186,17 +186,35 @@ namespace MaximaxCare
 
         private void sfButton2_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox3.Text != "")
             {
-                //searching of a specific patient
-                query = "select * from Patient where Pt_Ref_No = '" + textBox3.Text + "' and Date = '" + dateTimePicker1.Text + "' ";
-                ds = rp.getdata(query);
-                dataGridView1.DataSource = ds.Tables["0"].DefaultView;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    //searching of a specific patient
+                    query = "select * from Patient where Pt_Ref_No = '" + textBox3.Text + "' and Date = '" + dateTimePicker1.Text + "' ";
+                    ds = rp.getdata(query);
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
 
+                }
+            }
+            else
+            {
+                try
+                {
+                    //searching of a specific patient
+                    query = "select * from Patient where Date = '" + dateTimePicker1.Text + "' ";
+                    ds = rp.getdata(query);
+                    dataGridView1.DataSource = ds.Tables["0"].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
             }
         }
 
@@ -283,9 +301,16 @@ namespace MaximaxCare
             {
                 //delete the previous patient medicine list suggest by the doctor
                 //so that the new patient data could available to enter
-                query = "DELETE FROM Per_Patient_Med WHERE Pt_Ref_No = '" + txtPtRef.Text + "'";
+                query = "DELETE FROM Per_Patient_Med WHERE Pt_Ref_No = '" + txtPtRef.Text + "' and  Date = '" + dtpDate.Text + "'";
                 rp.savdelup(query);
                 dr = (MessageBox.Show("Deleted Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information));
+
+                txtSr.Text = "1";
+                inc = 1;
+
+                query = "select Sr_No, Drug, Day, Dose, Pt_Ref_No from Per_Patient_Med  where Pt_Ref_No = '" + txtPtRef.Text + "'";
+                ds = rp.getdata(query);
+                dataGridView2.DataSource = ds.Tables["0"].DefaultView;
             }
             catch (Exception ex)
             {
@@ -304,6 +329,28 @@ namespace MaximaxCare
             this.Close();
             Patient p = new Patient();
             p.Show();
+        }
+
+        private void sfButton7_Click(object sender, EventArgs e)
+        {
+            DGVPrinter dGV = new DGVPrinter();
+
+
+
+            dGV.Title = "MaximaxCare";
+
+            dGV.SubTitle = string.Format("Date:{0}", DateTime.Now.ToString());
+            dGV.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            dGV.PageNumbers = true;
+            dGV.PageNumberInHeader = false;
+            dGV.PorportionalColumns = true;
+            dGV.HeaderCellAlignment = StringAlignment.Near;
+            dGV.PageSettings.Landscape = true;
+            //   dGV.DefaultPageSettings.Landscape = true;
+            dGV.Footer = "Total Patients" + " : " + "Total Fee Collection" + " : " + dtpDate.Text;
+
+            dGV.FooterSpacing = 15;
+            dGV.PrintDataGridView(dataGridView2);
         }
 
         private void txtSr_TextChanged(object sender, EventArgs e)
@@ -327,7 +374,7 @@ namespace MaximaxCare
                     try
                     {
                         rp.savdelup(query);
-                        query = "select Sr_No, Drug, Day, Dose from Per_Patient_Med";
+                        query = "select Sr_No, Drug, Day, Dose, Pt_Ref_No from Per_Patient_Med  where Pt_Ref_No = '" + txtPtRef.Text + "'";
                         ds = rp.getdata(query);
                         dataGridView2.DataSource = ds.Tables["0"].DefaultView;
                         // increment on sr_no

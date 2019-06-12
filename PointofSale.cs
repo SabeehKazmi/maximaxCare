@@ -15,8 +15,8 @@ namespace MaximaxCare
         //basic declaration
         Repo rp = new Repo();
         DataSet ds = new DataSet();
-        String query, pt_ref_no;
-        int r, inc = 1;
+        String query, pt_ref_no, price;
+        double pr, p; int r, inc = 1;
         int total = 0, solo, grandT;
         DialogResult dr = new DialogResult();
         public PointofSale()
@@ -88,8 +88,16 @@ namespace MaximaxCare
 
         private void txtDrugs_TextChanged(object sender, EventArgs e)
         {
-            query = "select S_P_P from Medicine where Med_Name = '" + txtDrugs.Text + "'";
+            query = "select S_P_Piece from Medicine where Med_Name Like '" + txtDrugs.Text + "%'";
             ds = rp.getdata(query);
+            for (int i = 0; i < ds.Tables["0"].Rows.Count; i++)
+            {
+                string val = ds.Tables["0"].Rows[i][0].ToString();
+                
+                //variable contain price
+                textBox1.Text = val;
+                
+            }
             //dataGridView1.DataSource = ds.Tables["0"].DefaultView;
             //pt_ref_no = txtPtRef.Text;
         }
@@ -101,7 +109,36 @@ namespace MaximaxCare
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
 
+            pr = Convert.ToDouble(txtNo.Text);
+            p = Convert.ToDouble(textBox1.Text);
+            if (comboBox2.Text == "1")
+            {
+               
+                p = p * pr;
+                textBox1.Text = p.ToString();
+                
+            }
+            else if (comboBox2.Text == "1+1")
+            {
+               
+                p = p * pr * 2;
+                textBox1.Text = p.ToString();
+            }
+            else
+            {
+                p = p * pr * 3;
+                textBox1.Text = p.ToString();
+            }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void sfButton2_Click(object sender, EventArgs e)
@@ -180,6 +217,9 @@ namespace MaximaxCare
                     // for checking purposes----   dr = (MessageBox.Show(total.ToString(), solo.ToString(),MessageBoxButtons.OK,MessageBoxIcon.Error));
                 }
                 total = total + solo;
+                //adding it to profit
+                query = "INSERT INTO Profit (Med_Name, Date, Pt_Ref_No, Cash)" +
+                    " VALUES ('" + txtDrugs.Text + "''" + dateTimePicker1.Text + "','" + pt_ref_no + "','" + textBox1.Text + "')";
 
             }
             catch (Exception ex)

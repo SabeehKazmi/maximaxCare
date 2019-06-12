@@ -36,6 +36,7 @@
             this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -44,10 +45,10 @@
             this.txtBP = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNo = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -88,16 +89,13 @@
             this.sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
             this.sfButton7 = new Syncfusion.WinForms.Controls.SfButton();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.sfButton8 = new Syncfusion.WinForms.Controls.SfButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -152,12 +150,12 @@
             // sfButton2
             // 
             this.sfButton2.AccessibleName = "Button";
-            this.sfButton2.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton2.Location = new System.Drawing.Point(26, 125);
             this.sfButton2.Name = "sfButton2";
             this.sfButton2.Size = new System.Drawing.Size(96, 20);
-            this.sfButton2.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton2.TabIndex = 77;
             this.sfButton2.Text = "Search";
             this.sfButton2.UseVisualStyleBackColor = false;
@@ -187,6 +185,16 @@
             this.groupBox2.TabIndex = 122;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Test Section";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(16, 91);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(133, 85);
+            this.comboBox4.TabIndex = 133;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -254,7 +262,6 @@
             this.groupBox1.Controls.Add(this.sfButton1);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.dataGridView3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNo);
             this.groupBox1.Controls.Add(this.label24);
@@ -267,6 +274,16 @@
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Medicine";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(59, 35);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(199, 21);
+            this.comboBox5.TabIndex = 134;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // sfButton1
             // 
@@ -299,22 +316,11 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(216, 65);
+            this.dataGridView2.Location = new System.Drawing.Point(18, 65);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(327, 238);
+            this.dataGridView2.Size = new System.Drawing.Size(513, 238);
             this.dataGridView2.TabIndex = 60;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(18, 65);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(189, 238);
-            this.dataGridView3.TabIndex = 24;
             // 
             // label2
             // 
@@ -622,12 +628,12 @@
             // sfButton3
             // 
             this.sfButton3.AccessibleName = "Button";
-            this.sfButton3.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton3.Location = new System.Drawing.Point(842, 86);
             this.sfButton3.Name = "sfButton3";
             this.sfButton3.Size = new System.Drawing.Size(96, 20);
-            this.sfButton3.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.TabIndex = 127;
             this.sfButton3.Text = "Update";
             this.sfButton3.UseVisualStyleBackColor = false;
@@ -650,12 +656,12 @@
             // sfButton5
             // 
             this.sfButton5.AccessibleName = "Button";
-            this.sfButton5.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton5.Location = new System.Drawing.Point(944, 86);
             this.sfButton5.Name = "sfButton5";
             this.sfButton5.Size = new System.Drawing.Size(86, 54);
-            this.sfButton5.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton5.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton5.TabIndex = 129;
             this.sfButton5.Text = "Detail Added";
             this.sfButton5.UseVisualStyleBackColor = false;
@@ -673,6 +679,7 @@
             this.sfButton7.TabIndex = 131;
             this.sfButton7.Text = "Print";
             this.sfButton7.UseVisualStyleBackColor = false;
+            this.sfButton7.Click += new System.EventHandler(this.sfButton7_Click);
             // 
             // comboBox3
             // 
@@ -684,49 +691,29 @@
             this.comboBox3.TabIndex = 132;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(16, 91);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(133, 85);
-            this.comboBox4.TabIndex = 133;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
             // sfButton6
             // 
             this.sfButton6.AccessibleName = "Button";
-            this.sfButton6.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton6.Location = new System.Drawing.Point(917, 473);
             this.sfButton6.Name = "sfButton6";
             this.sfButton6.Size = new System.Drawing.Size(96, 20);
-            this.sfButton6.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton6.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton6.TabIndex = 133;
             this.sfButton6.Text = "Refresh";
             this.sfButton6.UseVisualStyleBackColor = false;
             this.sfButton6.Click += new System.EventHandler(this.sfButton6_Click_1);
             // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(59, 35);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(199, 21);
-            this.comboBox5.TabIndex = 134;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
             // sfButton8
             // 
             this.sfButton8.AccessibleName = "Button";
-            this.sfButton8.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton8.Location = new System.Drawing.Point(917, 525);
             this.sfButton8.Name = "sfButton8";
             this.sfButton8.Size = new System.Drawing.Size(96, 20);
-            this.sfButton8.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.TabIndex = 134;
             this.sfButton8.Text = "Patient";
             this.sfButton8.UseVisualStyleBackColor = false;
@@ -792,7 +779,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -817,7 +803,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNo;
         private System.Windows.Forms.Label label24;

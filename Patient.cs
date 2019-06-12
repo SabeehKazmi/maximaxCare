@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MaximaxCare
 {
@@ -125,7 +126,28 @@ namespace MaximaxCare
 
         private void sfButton4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string connectionString1 = @"data source=DESKTOP-FKO8DPG;initial catalog=Maximax;integrated security=true";
+                SqlConnection cn = new SqlConnection(connectionString1);
+                cn.Open();
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader reader;
+                cmd.CommandText = @"BACKUP DATABASE Maximax TO DISK = 'D:\BackUp\DFA.bak'";
 
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = cn;
+                reader = cmd.ExecuteReader();
+                cn.Close();
+
+                MessageBox.Show("Database Backup Successfull.");
+            }
+            catch (Exception ex)
+            {
+
+                // MessageBox.Show("Some Error in database backup", "Error");
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

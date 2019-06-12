@@ -57,12 +57,12 @@
             // sfButton2
             // 
             this.sfButton2.AccessibleName = "Button";
-            this.sfButton2.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton2.Location = new System.Drawing.Point(356, 131);
             this.sfButton2.Name = "sfButton2";
             this.sfButton2.Size = new System.Drawing.Size(96, 28);
-            this.sfButton2.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton2.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton2.TabIndex = 14;
             this.sfButton2.Text = "Add";
             this.sfButton2.UseVisualStyleBackColor = false;
@@ -96,12 +96,12 @@
             // sfButton3
             // 
             this.sfButton3.AccessibleName = "Button";
-            this.sfButton3.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton3.Location = new System.Drawing.Point(6, 230);
             this.sfButton3.Name = "sfButton3";
             this.sfButton3.Size = new System.Drawing.Size(88, 23);
-            this.sfButton3.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton3.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton3.TabIndex = 17;
             this.sfButton3.Text = "Inventory";
             this.sfButton3.UseVisualStyleBackColor = false;

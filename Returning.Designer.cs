@@ -84,12 +84,12 @@
             // sfButton8
             // 
             this.sfButton8.AccessibleName = "Button";
-            this.sfButton8.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.sfButton8.Location = new System.Drawing.Point(244, 45);
             this.sfButton8.Name = "sfButton8";
             this.sfButton8.Size = new System.Drawing.Size(80, 20);
-            this.sfButton8.Style.BackColor = System.Drawing.Color.Gold;
+            this.sfButton8.Style.BackColor = System.Drawing.Color.DarkTurquoise;
             this.sfButton8.TabIndex = 15;
             this.sfButton8.Text = "Search";
             this.sfButton8.UseVisualStyleBackColor = false;

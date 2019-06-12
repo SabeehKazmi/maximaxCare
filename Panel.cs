@@ -18,10 +18,11 @@ namespace MaximaxCare
         {
             InitializeComponent();
         }
-
+      
         private void Panel_Load(object sender, EventArgs e)
         {
-            
+
+            button1.FlatAppearance.BorderSize = 0;
         }
         private void sfButton5_Click(object sender, EventArgs e)
         {
@@ -32,14 +33,7 @@ namespace MaximaxCare
 
         private void sfButton1_Click(object sender, EventArgs e)
         {
-            // log you out from system
-            dr = (MessageBox.Show("Really want out?","Log Out", MessageBoxButtons.YesNo,MessageBoxIcon.Warning));
-            if (dr == DialogResult.Yes)
-            {
-                this.Hide();
-                Authorization a = new Authorization();
-                a.Show();
-            }
+          
         }
 
         private void sfButton4_Click(object sender, EventArgs e)
@@ -82,6 +76,23 @@ namespace MaximaxCare
             this.Hide();
             Settings s = new Settings();
             s.Show();
+        }
+
+        private void sfButton10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // log you out from system
+            dr = (MessageBox.Show("Really want out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (dr == DialogResult.Yes)
+            {
+                this.Hide();
+                Authorization a = new Authorization();
+                a.Show();
+            }
         }
     }
 }

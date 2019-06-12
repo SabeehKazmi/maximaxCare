@@ -112,3 +112,4 @@ C:\Users\XKazmi\source\repos\MaximaxCare\MaximaxCare\bin\Debug\zh-CHS\Microsoft.
 C:\Users\XKazmi\source\repos\MaximaxCare\MaximaxCare\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\XKazmi\source\repos\MaximaxCare\MaximaxCare\obj\Debug\RdlCompile.cache
 C:\Users\XKazmi\source\repos\MaximaxCare\MaximaxCare\obj\Debug\RdlCompile.compiled
+C:\Users\XKazmi\source\repos\MaximaxCare\MaximaxCare\obj\Debug\MaximaxCare.Form1.resources

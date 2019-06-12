@@ -69,6 +69,19 @@ namespace MaximaxCare
             {
                 dr = (MessageBox.Show("Enter Patient Type", "Required", MessageBoxButtons.OK, MessageBoxIcon.Information));
             }
+            query = "select P_Type from Patient_Type";
+            ds = rp.getdata(query);
+            for (int i = 0; i < ds.Tables["0"].Rows.Count; i++)
+            {
+                var val = ds.Tables["0"].Rows[i][0].ToString();
+                if (!comboBox1.Items.Contains(val))
+                {
+                    comboBox1.Items.Add(val);
+                }
+            }
+            query = "select * from Patient_Type";
+            ds = rp.getdata(query);
+            dataGridView1.DataSource = ds.Tables["0"].DefaultView;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

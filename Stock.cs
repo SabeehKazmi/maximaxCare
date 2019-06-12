@@ -96,5 +96,27 @@ namespace MaximaxCare
             Inventory i = new Inventory();
             i.Show();
         }
+
+        private void sfButton4_Click(object sender, EventArgs e)
+        {
+            DGVPrinter dGV = new DGVPrinter();
+
+
+
+            dGV.Title = "MaximaxCare";
+
+            dGV.SubTitle = string.Format("Date:{0}", DateTime.Now.ToString());
+            dGV.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            dGV.PageNumbers = true;
+            dGV.PageNumberInHeader = false;
+            dGV.PorportionalColumns = true;
+            dGV.HeaderCellAlignment = StringAlignment.Near;
+            dGV.PageSettings.Landscape = true;
+            //   dGV.DefaultPageSettings.Landscape = true;
+            dGV.Footer = "Total Patients" + " : " + "Total Fee Collection" + " : " + txtMedi.Text;
+
+            dGV.FooterSpacing = 15;
+            dGV.PrintDataGridView(dataGridView1);
+        }
     }
 }

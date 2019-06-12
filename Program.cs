@@ -16,7 +16,7 @@ namespace MaximaxCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PointofSale());
+            Application.Run(new Panel());
         }
     }
 }
